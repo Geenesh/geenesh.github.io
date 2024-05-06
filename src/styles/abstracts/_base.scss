@@ -1,0 +1,348 @@
+// ----------
+//  (M)argin
+// ----------
+@for $i from 0 to 16 {
+	.ma#{$i} {
+		margin: #{$i * 0.5}rem;
+	}
+	.my#{$i} {
+		margin-top: #{$i * 0.5}rem;
+		margin-bottom: #{$i * 0.5}rem;
+	}
+	.mx#{$i} {
+		margin-right: #{$i * 0.5}rem;
+		margin-left: #{$i * 0.5}rem;
+	}
+	.mt#{$i} {
+		margin-top: #{$i * 0.5}rem;
+	}
+	.mr#{$i} {
+		margin-right: #{$i * 0.5}rem;
+	}
+
+	.mb#{$i} {
+		margin-bottom: #{$i * 0.5}rem;
+	}
+	.ml#{$i} {
+		margin-left: #{$i * 0.5}rem;
+	}
+}
+.maauto {
+	margin: auto;
+}
+.myauto {
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.mxauto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.mtauto {
+	margin-top: auto;
+}
+.mrauto {
+	margin-right: auto;
+}
+.mbauto {
+	margin-bottom: auto;
+}
+.mlauto {
+	margin-left: auto;
+}
+
+// ----------
+//  (P)adding
+// ----------
+@for $i from 0 to 16 {
+	.pa#{$i} {
+		padding: #{$i * 0.5}rem;
+	}
+	.py#{$i} {
+		padding-top: #{$i * 0.5}rem;
+		padding-bottom: #{$i * 0.5}rem;
+	}
+	.px#{$i} {
+		padding-right: #{$i * 0.5}rem;
+		padding-left: #{$i * 0.5}rem;
+	}
+	.pt#{$i} {
+		padding-top: #{$i * 0.5}rem;
+	}
+	.pr#{$i} {
+		padding-right: #{$i * 0.5}rem;
+	}
+	.pb#{$i} {
+		padding-bottom: #{$i * 0.5}rem;
+	}
+	.pl#{$i} {
+		padding-left: #{$i * 0.5}rem;
+	}
+}
+
+// ----------
+//  (F)ont
+// ----------
+.fw100 {
+	font-weight: 100;
+}
+.fw200 {
+	font-weight: 200;
+}
+.fw300 {
+	font-weight: 300;
+}
+.fw400 {
+	font-weight: 400;
+}
+.fw500 {
+	font-weight: 500;
+}
+.fw600 {
+	font-weight: 600;
+}
+.fw700 {
+	font-weight: 700;
+}
+.fw800 {
+	font-weight: 800;
+}
+.fw900 {
+	font-weight: 900;
+}
+
+.fsn {
+	font-style: normal;
+}
+.fsi {
+	font-style: italic;
+}
+
+// ----------
+//  (T)ext
+// ----------
+.tac {
+	text-align: center;
+}
+.tar {
+	text-align: right;
+}
+.tal {
+	text-align: left;
+}
+.taj {
+	text-align: justify;
+}
+.tdn {
+	text-decoration: none;
+}
+.tdu {
+	text-decoration: underline;
+}
+.ttn {
+	text-transform: none;
+}
+.ttu {
+	text-transform: uppercase;
+}
+
+// ----------
+//  (C)olor
+// ----------
+
+$c-gray-l4: #e5e5e5; // lighter 4
+$c-gray-l3: #ccc; // lighter 3
+$c-gray-l2: #b2b2b2; // lighter 2
+$c-gray-l1: #999; // lighter 1
+$c-gray: #808080; // base
+$c-gray-d1: #666; // darker 1
+$c-gray-d2: #4d4d4d; // darker 2
+$c-gray-d3: #333; // darker 3
+$c-gray-d4: #1a1a1a; // darker 4
+
+// text color
+.tc-gray {
+	color: $c-gray;
+}
+.tc-gray-l1 {
+	color: $c-gray-l1;
+}
+.tc-gray-d1 {
+	color: $c-gray-d1;
+}
+// etc.
+
+// background color
+.bc-gray {
+	background-color: $c-gray;
+}
+.bc-gray-l1 {
+	background-color: $c-gray-l1;
+}
+.bc-gray-d1 {
+	background-color: $c-gray-d1;
+}
+// etc.
+
+.cursor {
+	cursor: pointer;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.d-grid {
+	display: grid;
+}
+
+.d-inline-block {
+	display: inline-block;
+}
+
+.d-block {
+	display: block;
+}
+
+$axis-values: auto, baseline, start, end, center, between, space-around, evenly;
+
+//JUSTIFY content classes
+@each $val in $axis-values {
+	.justify-#{$val} {
+		@if $val == 'between' {
+			justify-content: space-between;
+		} @else if $val == 'around' {
+			justify-content: space-around;
+		} @else if $val == 'evenly' {
+			justify-content: space-evenly;
+		} @else if $val == 'start' {
+			justify-content: start;
+		} @else if $val == 'end' {
+			justify-content: end;
+		} @else if $val == 'center' {
+			justify-content: center;
+		}
+	}
+
+	.justify-items-#{$val} {
+		@if $val == 'start' {
+			justify-items: start;
+		} @else if $val == 'end' {
+			justify-items: end;
+		} @else if $val == 'center' {
+			justify-items: center;
+		} @else if $val == 'stretch' {
+			justify-items: stretch;
+		}
+	}
+
+	.justify-self-#{$val} {
+		@if $val == 'start' {
+			justify-self: start;
+		} @else if $val == 'end' {
+			justify-self: end;
+		} @else if $val == 'center' {
+			justify-self: center;
+		} @else if $val == 'stretch' {
+			justify-self: stretch;
+		} @else if $val == 'auto' {
+			justify-self: auto;
+		}
+	}
+}
+
+//X-Axis classes
+@each $val in $axis-values {
+	.content-#{$val} {
+		@if $val == 'between' {
+			align-content: space-between;
+		} @else if $val == 'around' {
+			align-content: space-around;
+		} @else if $val == 'evenly' {
+			align-content: space-evenly;
+		} @else if $val == 'start' {
+			align-content: start;
+		} @else if $val == 'end' {
+			align-content: end;
+		} @else if $val == 'center' {
+			align-content: center;
+		}
+	}
+
+	.items-#{$val} {
+		@if $val == 'start' {
+			align-items: start;
+		} @else if $val == 'end' {
+			align-items: end;
+		} @else if $val == 'center' {
+			align-items: center;
+		} @else if $val == 'stretch' {
+			align-items: stretch;
+		} @else if $val == 'baseline' {
+			align-items: baseline;
+		}
+	}
+
+	.self-#{$val} {
+		@if $val == 'start' {
+			justify-self: start;
+		} @else if $val == 'end' {
+			justify-self: end;
+		} @else if $val == 'center' {
+			justify-self: center;
+		} @else if $val == 'stretch' {
+			justify-self: stretch;
+		} @else if $val == 'auto' {
+			justify-self: auto;
+		} @else if $val == 'baseline' {
+			justify-self: baseline;
+		}
+	}
+}
+
+//X & Y Axis classes
+@each $val in $axis-values {
+	.place-content-#{$val} {
+		@if $val == 'between' {
+			place-content: space-between;
+		} @else if $val == 'around' {
+			place-content: space-around;
+		} @else if $val == 'evenly' {
+			place-content: space-evenly;
+		} @else if $val == 'start' {
+			place-content: start;
+		} @else if $val == 'end' {
+			place-content: end;
+		} @else if $val == 'center' {
+			place-content: center;
+		} @else if $val == 'stretch' {
+			place-content: stretch;
+		}
+	}
+
+	.place-items-#{$val} {
+		@if $val == 'start' {
+			place-items: start;
+		} @else if $val == 'end' {
+			place-items: end;
+		} @else if $val == 'center' {
+			place-items: center;
+		} @else if $val == 'stretch' {
+			place-items: stretch;
+		}
+	}
+
+	.place-self-#{$val} {
+		@if $val == 'start' {
+			place-self: start;
+		} @else if $val == 'end' {
+			place-self: end;
+		} @else if $val == 'center' {
+			place-self: center;
+		} @else if $val == 'stretch' {
+			place-self: stretch;
+		} @else if $val == 'auto' {
+			place-self: auto;
+		}
+	}
+}

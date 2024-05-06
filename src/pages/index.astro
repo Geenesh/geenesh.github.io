@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../sections/About.astro";
+import Contact from "../sections/Contact.astro";
+import Hero from "../sections/Hero.astro";
+import Skills from "../sections/Skills.astro";
+import Projects from "../sections/Projects.astro";
+import Services from "../sections/Services.astro";
+import WorkSection from "../sections/WorkSection.astro";
+import AboutSection from "../sections/AboutSection.astro";
+---
+
+<Layout title='Welcome to Astro.'>
+  <Hero />
+  <!-- <About /> -->
+  <AboutSection />
+  <Services />
+  <WorkSection />
+  <Skills />
+  <div class='project-res'>
+    <Projects />
+  </div>
+  <Contact />
+</Layout>
+
+<style>
+  @media (max-width: 800px) {
+    .project-res {
+      display: none;
+    }
+  }
+</style>

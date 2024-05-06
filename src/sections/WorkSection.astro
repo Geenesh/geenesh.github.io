@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import UpArrow from "../assets/uparrow.svg";
+import WorkCard from "../components/WorkCard.astro";
+
+import Image1 from "../assets/image-1.png";
+import Image2 from "../assets/project-bg.jpg";
+import Image3 from "../assets/contact-bg.jpg";
+import Image4 from "../assets/about-bg.jpg";
+---
+
+<div class='work-container'>
+  <div class='work-section'>
+    <div class='heading-section'>
+      <h1 class='title'>Selected Work</h1>
+      <a href='' class='about'>
+        <div class='icons'><Image src={UpArrow} alt='' /></div>
+        <p>See all</p>
+      </a>
+    </div>
+    <div class='works-done'>
+      <WorkCard
+        imagePath={Image1}
+        projectName='NGO Website'
+        categoryName='Web Design'
+      />
+      <WorkCard
+        imagePath={Image2}
+        projectName='NGO Website'
+        categoryName='Web Design'
+      />
+      <WorkCard
+        imagePath={Image3}
+        projectName='NGO Website'
+        categoryName='Web Design'
+      />
+      <WorkCard
+        imagePath={Image4}
+        projectName='NGO Website'
+        categoryName='Web Design'
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .heading-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .work-container {
+    background-color: var(--bg-color);
+    padding: 3rem 0;
+  }
+  .work-section {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2rem;
+    color: var(--heading-color);
+    font-weight: 400;
+  }
+  .about {
+    display: flex;
+    gap: 0.4rem;
+    text-decoration: none;
+    p {
+      font-size: 0.9rem;
+      color: var(--sub-txt-color);
+    }
+  }
+  .icons {
+    padding: 0.5rem;
+    background-color: var(--card-bg-color);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .works-done {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    place-content: center;
+    padding: 1rem;
+  }
+  @media (max-width: 800px) {
+    .works-done {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 1rem;
+      place-items: center;
+      width: 100%;
+    }
+    .work-section {
+      max-width: 100%;
+    }
+  }
+</style>

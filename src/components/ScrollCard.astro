@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+
+const { images } = Astro.props;
+---
+
+<div class='scroll-card'>
+  {images?.map((image) => <Image src={image} alt='' />)}
+</div>
+
+<style>
+  .scroll-card {
+    height: 80vh;
+    width: 100%;
+    overflow: auto;
+    cursor: url("../assets/scrollpointer.svg"), auto;
+
+    img {
+      object-fit: cover;
+      height: fit-content;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+</style>
+
+<script is:inline>
+  var content = document.querySelectorAll(".scroll-card");
+  var scroll = setInterval(function () {
+    content.scrollTop += 1;
+  }, 50);
+
+  content.addEventListener("mouseover", function () {
+    clearInterval(scroll);
+  });
+
+  content.addEventListener("mouseout", function () {
+    scroll = setInterval(function () {
+      content.scrollTop += 1;
+    }, 50);
+  });
+</script>

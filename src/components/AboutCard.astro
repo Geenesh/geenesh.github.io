@@ -1,0 +1,140 @@
+---
+import { Image } from "astro:assets";
+import DonateIcon from "../assets/Group.svg";
+import TeamIcon from "../assets/Vector.svg";
+
+interface cardPorps {
+  Reverse: boolean;
+  ImagePath: any;
+  Heading: string;
+  Description: string;
+}
+const { Reverse, ImagePath, Heading, Description } = Astro.props;
+---
+
+<div class='container'>
+  <div class:list={[Reverse ? "main-container" : "main-container-swap"]}>
+    <div class='image-container item'>
+      <Image class='img' src={ImagePath} alt='' />
+    </div>
+    <div class='content item'>
+      <p class='title'>{Heading}</p>
+      <p class='description'>
+        {Description}
+      </p>
+      <div class='cta'>
+        <a href=''>Hire Me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  .main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .main-container-swap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row-reverse;
+  }
+
+  .image-container {
+    width: 600px;
+    height: auto;
+    /* border-radius: 25px;
+    overflow: hidden; */
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 50%;
+    padding: 2rem;
+    background-color: var(--bg-card-color);
+    box-shadow: inset 5px 5px 15px rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    margin: 1rem;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+  }
+  .description {
+    font-size: 1rem;
+    line-height: 36px;
+    color: var(--sub-txt-color);
+  }
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .cta a {
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--heading-color);
+  }
+
+  @media (max-width: 920px) {
+    .main-container {
+      flex-direction: column;
+    }
+    .main-container-swap {
+      flex-direction: column;
+    }
+    .content {
+      gap: 1rem;
+      max-width: 100%;
+      box-shadow: none;
+    }
+    .description {
+      font-size: 1rem;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .image-container {
+      width: 100%;
+      height: auto;
+      /* border-radius: 25px; */
+      overflow: hidden;
+    }
+  }
+  @media (max-width: 350px) {
+    .cta {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

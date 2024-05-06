@@ -1,0 +1,48 @@
+---
+import ServiceCard from "../components/ServiceCard.astro";
+---
+
+<div class='service-container'>
+  <div class='service-section'>
+    <ServiceCard
+      number='01'
+      heading='Web Design'
+      description=`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, commodi?`
+      about='About Web Design'
+    />
+    <ServiceCard
+      number='01'
+      heading='Web Design'
+      description=`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, commodi?`
+      about='About Web Design'
+    />
+    <ServiceCard
+      number='01'
+      heading='Web Design'
+      description=`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, commodi?`
+      about='About Web Design'
+    />
+  </div>
+</div>
+
+<style>
+  .service-container {
+    padding: 4rem 1rem;
+    background-color: var(--bg-color);
+  }
+  .service-section {
+    max-width: 1450px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  @media (max-width: 800px) {
+    .service-section {
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+</style>
