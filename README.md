@@ -1,4 +1,4 @@
-# Hello, I'm [Geenesh S] 👋
+# Hello, I'm Geenesh S 👋
 
 I'm a passionate and dedicated developer specializing in *React Native*. I love building high-quality mobile applications and bringing ideas to life.
 
