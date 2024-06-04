@@ -1,9 +1,13 @@
 # Hello, I'm Geenesh S 👋
-
+!GitHub followers
+!Twitter Follow
 I'm a passionate and dedicated developer specializing in *React Native*. I love building high-quality mobile applications and bringing ideas to life.
 
 ## 🛠 Skills
-
+!JavaScript
+!React Native
+!Redux
+!Git
 - *Languages*: JavaScript, TypeScript
 - *Frameworks/Libraries*: React Native, Redux, React Navigation
 - *Tools*: Git, GitHub, VS Code, Xcode, Android Studio
