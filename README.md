@@ -3,7 +3,7 @@
 I'm a passionate and dedicated developer specializing in *React Native*. I love building high-quality mobile applications and bringing ideas to life.
 
 ## 🛠 Skills
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="200"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="100"/>
   ![React Native](https://img.shields.io/badge/-ReactNative-black?style=flat-square&logo=react) 
   ![Redux](https://img.shields.io/badge/-Redux-black?style=flat-square&logo=redux) 
   
