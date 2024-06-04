@@ -4,7 +4,7 @@ I'm a passionate and dedicated developer specializing in *React Native*. I love 
 
 ## 🛠 Skills
   
-  ![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
+  ![JavaScript](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
   ![React Native](https://img.shields.io/badge/-ReactNative-black?style=flat-square&logo=react) 
   ![Redux](https://img.shields.io/badge/-Redux-black?style=flat-square&logo=redux) 
   
