@@ -28,8 +28,6 @@ I'm currently learning more about *GraphQL* and *Apollo Client* to enhance my sk
 Feel free to reach out to me:
 
 - Email: geenesh99@gmail.com
-- LinkedIn: Your LinkedIn
-- Twitter: Your Twitter
 
 ## ⭐ Fun Fact
 
