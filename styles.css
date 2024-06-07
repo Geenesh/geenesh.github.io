@@ -88,7 +88,7 @@ nav a:hover {
 }
 
 .expertise-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-1px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -121,7 +121,7 @@ nav a:hover {
 }
 
 .project:hover {
-    transform: translateY(-10px);
+    transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -134,10 +134,12 @@ nav a:hover {
 .swiper-wrapper {
     display: flex;
     justify-content: center;
+    /* Align slides to the center */
 }
 
 .swiper-slide {
     width: auto;
+    /* Allow slides to have variable width */
 }
 
 .swiper-pagination-bullet-active {
@@ -189,4 +191,92 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Form Container Styles */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Label Styles */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input and Textarea Styles */
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: #ff9800;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Link Styles */
+.form-container p a {
+    color: #ff9800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-container p a:hover {
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.75rem;
+    }
 }
