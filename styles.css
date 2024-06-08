@@ -165,3 +165,23 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+
+.social-links {
+    display: flex;
+    gap: 10px; /* space between icons */
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 24px; /* set the desired width */
+    height: 24px; /* set the desired height */
+    object-fit: cover; /* ensures the image covers the space without distortion */
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
