@@ -87,8 +87,8 @@ nav a:hover {
 
 .hero-image img {
     border-radius: 50%;
-    max-width: 300px;
-    height: auto;
+    width: 300px;
+    height: 400px;
 }
 
 .worked-with {
@@ -107,7 +107,13 @@ nav a:hover {
     padding: 1rem 0;
 }
 
-.case-studies, .testimonials, .recent-work, .contact {
+.worked-with .logos img {
+    /* width: 50px; */
+    /* height: 50px; */
+    margin: 10px;
+}
+
+.testimonials, .recent-work, .contact {
     padding: 2rem 0;
     text-align: center;
     background-color: #f9f9f9;
@@ -119,7 +125,7 @@ nav a:hover {
     padding: 0 1rem;
 }
 
-.case-study, .testimonial, .work-item {
+.testimonial, .work-item {
     background: #fff;
     border-radius: 10px;
     padding: 1rem;
@@ -128,7 +134,7 @@ nav a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.case-study:hover, .testimonial:hover, .work-item:hover {
+.testimonial:hover, .work-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -169,10 +175,7 @@ footer {
 .social-links {
     display: flex;
     gap: 10px; /* space between icons */
-}
-
-.social-links a {
-    display: inline-block;
+    flex-direction: column;
 }
 
 .social-icon {
@@ -185,3 +188,89 @@ footer {
 .social-icon:hover {
     transform: scale(1.2);
 }
+
+.case-studies {
+    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.case-studies .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.case-studies h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.case-studies p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.case-study {
+    position: relative;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.case-study img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.case-study-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.case-study-overlay .label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.case-study-overlay h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.case-study-overlay p {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.case-study:hover img {
+    transform: scale(1.1);
+}
+
+.case-study:hover .case-study-overlay {
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+}
+
