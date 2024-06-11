@@ -1,277 +1,280 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+/* Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
-    margin: 0;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0;
+    margin: 0 15px;
 }
 
-nav a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #32CD32;
+nav ul li a:hover {
+    color: #ddd;
 }
 
-.social-links a {
-    margin-left: 1rem;
-    color: #fff;
-    text-decoration: none;
-}
-
+/* Hero Section */
 .hero {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.hero .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/myPic.png') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .hero-text {
-    max-width: 50%;
-}
-
-.hero-text button {
-    background-color: #32CD32;
-    border: none;
-    padding: 1rem 2rem;
     color: #fff;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
     cursor: pointer;
-    margin-top: 1rem;
-}
-
-.hero-text button:hover {
-    background-color: #228B22;
+    transition: background 0.3s ease;
 }
 
 .hero-image img {
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
-    width: 300px;
-    height: 400px;
-}
-
-.worked-with {
-    margin-top: 2rem;
-}
-
-.worked-with h2 {
-    text-align: center;
-}
-
-.logos {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 1rem 0;
-}
-
-.worked-with .logos img {
-    /* width: 50px; */
-    /* height: 50px; */
-    margin: 10px;
-}
-
-.testimonials, .recent-work, .contact {
-    padding: 2rem 0;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.testimonial, .work-item {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.testimonial:hover, .work-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-button {
-    background-color: #32CD32;
-    border: none;
-    padding: 1rem 2rem;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-button:hover {
-    background-color: #228B22;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    width: 100%;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
 }
 
 .social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Worked With Section */
+.worked-with {
+    background: rgba(164, 164, 164, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.worked-with h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.worked-with .logos {
     display: flex;
-    gap: 10px; /* space between icons */
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.social-icon {
-    width: 24px; /* set the desired width */
-    height: 24px; /* set the desired height */
-    object-fit: cover; /* ensures the image covers the space without distortion */
-    transition: transform 0.2s ease;
+.worked-with .logos img {
+    margin: 10px;
+    height: 50px;
+    width: auto;
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
-}
-
+/* Case Studies Section */
 .case-studies {
-    position: relative;
-    padding: 20px;
-    background-color: #f9f9f9;
+    background: #f9f9f9;
+    padding: 50px 20px;
 }
 
 .case-studies .container {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
 }
 
 .case-studies h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
-.case-studies p {
-    font-size: 1.2em;
+    font-size: 2.5rem;
+    text-align: center;
     margin-bottom: 30px;
-    width: 100%;
+    font-weight: 700;
 }
 
 .case-study {
-    position: relative;
-    width: 500px;
-    height: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 0 10rem 0 10rem;
 }
 
 .case-study img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    background-color: #fff;
-    transition: transform 0.3s ease;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    align-items: center;
 }
 
-.case-study-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    color: #fff;
+.case-study .content {
+    padding: 20px;
+    max-width: 700px;
+}
+
+.case-study h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.case-study p {
+    font-size: 1rem;
+}
+
+.case-study:nth-child(odd) { 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.case-study:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+    .case-study {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0 2rem; /* Adjusted padding for larger screens */
+    }
+
+    .case-study .content {
+        text-align: left;
+    }
+
+    .case-study img {
+        margin: 10px 20px; /* Adjusted margin for larger screens */
+    }
+}
+/* Contact Section */
+.contact {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.case-study-overlay .label {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
-.case-study-overlay h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
+/* CSS */
+.button {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 50px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
 }
 
-.case-study-overlay p {
-    font-size: 1em;
-    margin-bottom: 0;
+.button:disabled {
+  pointer-events: none;
 }
 
-.case-study:hover img {
-    transform: scale(1.1);
+.button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
 }
 
-.case-study:hover .case-study-overlay {
-    background: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+.button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
-
