@@ -3,9 +3,6 @@
 I'm a passionate and dedicated developer specializing in *React Native*. I love building high-quality mobile applications and bringing ideas to life.
 
 ## 🛠 Skills
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="40"/>
-  ![React Native](https://img.shields.io/badge/-ReactNative-black?style=flat-square&logo=react) 
-  ![Redux](https://img.shields.io/badge/-Redux-black?style=flat-square&logo=redux) 
   
 - *Languages*: JavaScript, TypeScript
 - *Frameworks/Libraries*: React Native, Redux, React Navigation
@@ -15,13 +12,17 @@ I'm a passionate and dedicated developer specializing in *React Native*. I love 
 
 Here are some of the projects I've worked on using React Native:
 
-1. *Project 1*: Mobile App for a telecom company - Confidential.
+1. Mobile App for a telecom company - Super App.
 
-2. *Project 2*: Mobile App for HR management
+2. Mobile App for HR management
+
+3. Mobile App for Inventory Management
+
+4. Mobile App social media for a people intesrested in sports.
 
 ## 📚 What I'm Learning
 
-I'm currently learning more about *GraphQL* and *Apollo Client* to enhance my skills in managing data in React Native applications.
+I'm currently learning more about *GraphQL* and *Machine learinging & LLM's* to enhance my skills in managing data in React Native applications.
 
 ## 📫 How to reach me
 
