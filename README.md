@@ -22,7 +22,7 @@ Here are some of the projects I've worked on using React Native:
 
 ## 📚 What I'm Learning
 
-I'm currently learning more about *GraphQL* and *Machine learinging & LLM's* to enhance my skills in managing data in React Native applications.
+I'm currently learning more about *GraphQL* and *Machine learning & LLM's* to enhance my skills in managing data in React Native applications.
 
 ## 📫 How to reach me
 
