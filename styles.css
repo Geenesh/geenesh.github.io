@@ -173,13 +173,14 @@ nav ul li a:hover {
 }
 
 .case-study:nth-child(odd) { 
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 5rem;
+    align-items: center;
 }
 
 .case-study:nth-child(even) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    gap: 5rem;
+    align-items: center;
 }
 
 @media only screen and (min-width: 768px) {

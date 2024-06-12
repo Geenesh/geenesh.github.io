@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <title>Zaapi App</title>
     <style>
@@ -13,7 +16,6 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background: #e6e5e5;
             color: #333;
         }
 
@@ -81,7 +83,6 @@
 
         .screenshots {
             display: flex;
-            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -138,36 +139,68 @@
         <div class="header-container">
             <a href="index.html"><i class="fas fa-arrow-left"></i> Go Home</a>
         </div>
-        <h1>Zaapi E-commerce Platform</h1>
-            <p>The only platform in Thailand with unified chats across all social media and e-commerce</p>
+        <h1 style="color: #fff;">Zaapi E-commerce Platform</h1>
+        <p>The only platform in Thailand with unified chats across all social media and e-commerce</p>
     </header>
     <main>
         <h2>About Zaapi:</h2>
-        <p><t/>Zaapi is an innovative e-commerce platform designed to expand the company's reach and increase sales by
+        <p>Zaapi is an innovative e-commerce platform designed to expand the company's reach and increase sales by
             creating an online presence. The platform offers a user-friendly interface, secure transactions, and various
-            features to help businesses manage their online stores efficiently.</p>
+            features to help businesses manage their online stores efficiently.
+        </p>
 
         <h2>Screenshots:</h2>
         <div class="screenshots">
-            <img src="./assets/zaapi-splash.jpeg" alt="Zaapi Splash">
-            <img src="./assets/zaapi-filters.jpeg" alt="Zaapi Filters">
-            <img src="./assets/zaapi-profile.jpeg" alt="Zaapi Profile">
-            <img src="./assets/zaapi-qr.jpeg" alt="Zaapi QR">
-            <img src="./assets/zaapi-settings.jpeg" alt="Zaapi Settings">
+            <div style="display: flex;gap: 2rem;" uk-lightbox="animation: fade">
+                <div>
+                    <a class="uk-inline" href="./assets/zaapi-splash.jpeg" data-caption="Splash Screen">
+                        <img src="./assets/zaapi-splash.jpeg" width="1800" height="1200" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a class="uk-inline" href="./assets/zaapi-filters.jpeg" data-caption="Filters">
+                        <img src="./assets/zaapi-filters.jpeg" width="1800" height="1200" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a class="uk-inline" href="./assets/zaapi-profile.jpeg" data-caption="Profile">
+                        <img src="./assets/zaapi-profile.jpeg" width="1800" height="1200" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a class="uk-inline" href="./assets/zaapi-qr.jpeg" data-caption="QR code">
+                        <img src="./assets/zaapi-qr.jpeg" width="1800" height="1200" alt="">
+                    </a>
+                </div>
+                <div>
+                    <a class="uk-inline" href="./assets/zaapi-settings.jpeg" data-caption="Setting Screen">
+                        <img src="./assets/zaapi-settings.jpeg" width="1800" height="1200" alt="">
+                    </a>
+                </div>
+            </div>
         </div>
         <h2 style="margin-top: 2rem;">Responsibilities:</h2>
         <ul style="line-height: 2rem;">
-            <li><strong>App Development:</strong> Implement new features using React Native; write clean, efficient code.</li>
-            <li><strong>UI/UX Implementation:</strong> Translate designs into responsive interfaces; ensure consistency with Zaapi's brand.</li>
-            <li><strong>Performance Optimization:</strong> Optimize app speed and scalability; fix performance issues and bugs.</li>
-            <li><strong>Integration with Backend Services:</strong> Integrate APIs and services; ensure efficient data rendering.</li>
-            <li><strong>Cross-Platform Compatibility:</strong> Ensure smooth operation on iOS and Android; address platform-specific issues.</li>
-            <li><strong>Code Review and Collaboration:</strong> Participate in code reviews; collaborate using version control systems like Git.</li>
-            <li><strong>Documentation:</strong> Create and maintain technical documentation; document features and workflows.</li>
-            <li><strong>User Feedback and Iteration:</strong> Analyze user feedback; iterate on features based on feedback and requirements.</li>
-            <li><strong>Security Best Practices:</strong> Implement security best practices; update app to address vulnerabilities.</li>
+            <li><strong>App Development:</strong> Implement new features using React Native; write clean, efficient
+                code.</li>
+            <li><strong>UI/UX Implementation:</strong> Translate designs into responsive interfaces; ensure consistency
+                with Zaapi's brand.</li>
+            <li><strong>Performance Optimization:</strong> Optimize app speed and scalability; fix performance issues
+                and bugs.</li>
+            <li><strong>Integration with Backend Services:</strong> Integrate APIs and services; ensure efficient data
+                rendering.</li>
+            <li><strong>Cross-Platform Compatibility:</strong> Ensure smooth operation on iOS and Android; address
+                platform-specific issues.</li>
+            <li><strong>Code Review and Collaboration:</strong> Participate in code reviews; collaborate using version
+                control systems like Git.</li>
+            <li><strong>Documentation:</strong> Create and maintain technical documentation; document features and
+                workflows.</li>
+            <li><strong>User Feedback and Iteration:</strong> Analyze user feedback; iterate on features based on
+                feedback and requirements.</li>
+            <li><strong>Security Best Practices:</strong> Implement security best practices; update app to address
+                vulnerabilities.</li>
         </ul>
-        
+
     </main>
     <footer>
         &copy; 2024 Geenesh S. All rights reserved.
