@@ -4,25 +4,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Geenesh's portfolio showcasing skills in web development and DevOps.">
+	<meta name="description"
+		content="Geenesh S - FullStack Developer specializing in React Native, Web Development and DevOps solutions with expertise in modern technologies.">
+	<meta name="keywords" content="FullStack Developer, React Native, Web Development, DevOps, Mobile App Developer">
+	<meta name="author" content="Geenesh S">
 	<meta property="og:title" content="Geenesh S - FullStack | Mobile App | DevOps">
 	<meta property="og:description"
 		content="Explore the portfolio of Geenesh S, a FullStack Developer skilled in web development and DevOps. View projects, expertise, and professional experience.">
 	<meta property="og:image"
 		content="https://media.licdn.com/dms/image/D5603AQGYaTEIWNm9lg/profile-displayphoto-shrink_200_200/0/1714452923050?e=2147483647&v=beta&t=vscwa-_aCeRd6riVgP_PkcGFYTaysglzbSbr0PqKDKc">
 	<meta property="og:url" content="https://geenesh.github.io">
-	<meta name="twitter:card"
+	<meta property="og:type" content="website">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Geenesh S - FullStack | Mobile App | DevOps">
+	<meta name="twitter:description"
+		content="Explore the portfolio of Geenesh S, a FullStack Developer skilled in web development and DevOps.">
+	<meta name="twitter:image"
 		content="https://media.licdn.com/dms/image/D5603AQGYaTEIWNm9lg/profile-displayphoto-shrink_200_200/0/1714452923050?e=2147483647&v=beta&t=vscwa-_aCeRd6riVgP_PkcGFYTaysglzbSbr0PqKDKc">
+	<link rel="canonical" href="https://geenesh.github.io">
 	<title>Geenesh S | FullStack | Mobile App | DevOps</title>
 	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/css/uikit.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 	<script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -32,13 +40,18 @@
         "sameAs": [
             "https://www.linkedin.com/in/geenesh-s-812825228",
             "https://github.com/Geenesh",
-			"https://www.facebook.com/geenesh.dhanush",
-			"https://www.upwork.com/en-gb/freelancers/~0139519a2c11b8967b"
+            "https://www.facebook.com/geenesh.dhanush",
+            "https://www.upwork.com/en-gb/freelancers/~0139519a2c11b8967b"
         ],
         "jobTitle": "FullStack Developer",
         "worksFor": {
             "@type": "Organization",
             "name": "Squapl Technologies"
+        },
+        "knowsAbout": ["React Native", "DevOps", "Web Development", "TypeScript", "JavaScript", "Node.js"],
+        "alumniOf": {
+            "@type": "Organization",
+            "name": "Your University"
         }
     }
     </script>
@@ -48,107 +61,724 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#case-studies">My Work</a></li>
-				<li><a href="#contact">Get In Touch</a></li>
+				<li><a href="#home" aria-label="Home section">Home</a></li>
+				<li><a href="#case-studies" aria-label="My work section">My Work</a></li>
+				<li><a href="#contact" aria-label="Contact section">Get In Touch</a></li>
 			</ul>
 		</nav>
 	</header>
 	<section class="hero" id="home">
-		<div class="container">
-			<div class="hero-text">
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank">
-						<img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon">
-					</a>
-					<a href="https://www.upwork.com/freelancers/~0139519a2c11b8967b?mp_source=share" target="_blank">
-						<img src="./assets/upworks.png" alt="Upwork" class="social-icon">
-					</a>
-					<a href="https://github.com/Geenesh" target="_blank">
-						<img src="./assets/github.png" alt="GitHub" class="social-icon">
-					</a>
-					<a href="https://www.instagram.com" target="_blank">
-						<img src="./assets/instagram.png" alt="Instagram" class="social-icon">
-					</a>
-					<a href="https://www.facebook.com/geenesh.dhanush" target="_blank">
-						<img src="./assets/facebook.png" alt="Facebook" class="social-icon">
-					</a>
-				</div>
-				<h1 style="color: rgb(255, 255, 255); font-family: 'Lato', sans-serif;">Geenesh S</h1>
-				<p>I'm a FullStack Developer!</p>
-				<p>"Of all actions, the most excellent is to maintain <br/>oneself uninjured from the heat of the world."</p>
-				<button class="button"><a href="mailto:geenesh99@gmail.com?&subject=Profile%20Interest - from site&body=I%20would%20like%20to%20hire%20you%20get%20back%20ASAP!">Hire Me!</a></button>
-			</div>
-			<section class="worked-with">
-				<h2 style="font-family: 'Lato', sans-serif;color: floralwhite;">Worked with</h2>
-				<div class="logos">
-					<img src="./assets/react.png" alt="React & React Native" loading="lazy" height="50" width="55">
-					<img src="./assets/aws.png" alt="AWS" loading="lazy" height="50" width="70">
-					<img src="./assets/nodejs.png" alt="Node Js" loading="lazy" height="50" width="70">
-					<img src="./assets/docker.png" alt="Docker" loading="lazy" height="50" width="60">
-					<img src="./assets/jenkins.png" alt="Jenkins" loading="lazy" height="60" width="50">
-					<img src="./assets/typescriptIcon.png" alt="Typescript" loading="lazy" height="50" width="50">
-					<img src="./assets/nestjs.png" alt="Nest Js" loading="lazy" height="50" width="50">
-					<img src="./assets/javascriptJs.png" alt="Js" loading="lazy" height="50" width="50">
-				</div>
-			</section>	
-		</div>
-	</section>
-	<section class="case-studies" id="case-studies">
-		<h2 style="font-family: 'Lato', sans-serif;">My Work</h2>
-		<div class="container">
-				<div class="case-study">
-					<a href="zaapi-details.html">
-						<img src="./assets/zaapi.jpeg" alt="Zaapi">
-					</a>
-					<div class="content">
-						<span class="label">E-commerce Platform Development</span>
-						<h3>Development of an E-commerce Platform</h3>
-						<p>To create an online platform to expand the company's reach and increase sales.</p>
+		<div class="hero-particles" id="particles-js"></div>
+		<div class="container hero-container">
+			<div class="hero-content">
+				<div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+					<div class="social-links" data-aos="fade-right" data-aos-delay="200">
+						<a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener"
+							aria-label="LinkedIn profile" class="social-link">
+							<img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon" width="30" height="30"
+								loading="eager">
+						</a>
+						<a href="https://www.upwork.com/freelancers/~0139519a2c11b8967b?mp_source=share" target="_blank"
+							rel="noopener" aria-label="Upwork profile" class="social-link">
+							<img src="./assets/upworks.png" alt="Upwork" class="social-icon" width="30" height="30"
+								loading="eager">
+						</a>
+						<a href="https://github.com/Geenesh" target="_blank" rel="noopener" aria-label="GitHub profile"
+							class="social-link">
+							<img src="./assets/github.png" alt="GitHub" class="social-icon" width="30" height="30"
+								loading="eager">
+						</a>
+						<a href="https://www.instagram.com" target="_blank" rel="noopener"
+							aria-label="Instagram profile" class="social-link">
+							<img src="./assets/instagram.png" alt="Instagram" class="social-icon" width="30" height="30"
+								loading="eager">
+						</a>
+						<a href="https://www.facebook.com/geenesh.dhanush" target="_blank" rel="noopener"
+							aria-label="Facebook profile" class="social-link">
+							<img src="./assets/facebook.png" alt="Facebook" class="social-icon" width="30" height="30"
+								loading="eager">
+						</a>
+					</div>
+					<div class="greeting-text" data-aos="fade-up" data-aos-delay="100">Hello, I'm</div>
+					<h1 class="name-heading" data-aos="fade-up" data-aos-delay="200">
+						<span class="typing-text">Geenesh S</span>
+					</h1>
+					<div class="role-container" data-aos="fade-up" data-aos-delay="300">
+						<p class="role-text">I'm a <span id="role-rotator">FullStack Developer</span></p>
+					</div>
+					<p class="quote" data-aos="fade-up" data-aos-delay="400">"Of all actions, the most excellent is to
+						maintain <br />oneself uninjured from the heat of the world."</p>
+					<div class="cta-buttons" data-aos="fade-up" data-aos-delay="500">
+						<a href="mailto:geenesh99@gmail.com?&subject=Profile%20Interest - from site&body=I%20would%20like%20to%20hire%20you%20get%20back%20ASAP!"
+							class="button primary-button">
+							<span>Hire Me!</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z" />
+								<path
+									d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+									fill="currentColor" />
+							</svg>
+						</a>
+						<a href="#case-studies" class="button secondary-button">
+							<span>View Projects</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z" />
+								<path
+									d="M3 10H2V4.003C2 3.449 2.455 3 2.992 3h18.016A.99.99 0 0 1 22 4.003V10h-1v10.001a.996.996 0 0 1-.993.999H3.993A.996.996 0 0 1 3 20.001V10zm16 0H5v9h14v-9zM4 5v3h16V5H4zm5 7h6v2H9v-2z"
+									fill="currentColor" />
+							</svg>
+						</a>
 					</div>
 				</div>
-			<div class="case-study">
-				<a href="ecocash-details.html">
-					<img src="./assets/ecocash.png" alt="Zaapi">
-				</a>
-				<div class="content">
-					<span class="label">SuperApp - Telecom Company</span>
-					<h3>Development of a Super App</h3>
-					<p>Created a social networking app to connect people and facilitate communication and sharing.</p>
+
+				<div class="hero-tech" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+					<div class="tech-blob">
+						<h2>Tech Stack</h2>
+						<div class="tech-grid">
+							<div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+								<img src="./assets/react.png" alt="React & React Native" loading="eager" height="50"
+									width="55">
+								<span>React</span>
+							</div>
+							<div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+								<img src="./assets/aws.png" alt="AWS" loading="eager" height="50" width="70">
+								<span>AWS</span>
+							</div>
+							<div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+								<img src="./assets/nodejs.png" alt="Node Js" loading="eager" height="50" width="70">
+								<span>Node.js</span>
+							</div>
+							<div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+								<img src="./assets/docker.png" alt="Docker" loading="eager" height="50" width="60">
+								<span>Docker</span>
+							</div>
+							<div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+								<img src="./assets/typescriptIcon.png" alt="Typescript" loading="eager" height="50"
+									width="50">
+								<span>TypeScript</span>
+							</div>
+							<div class="tech-item" data-aos="zoom-in" data-aos-delay="550">
+								<img src="./assets/nestjs.png" alt="Nest Js" loading="eager" height="50" width="50">
+								<span>NestJS</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			
-			<div class="case-study">
-				<a href="kridas-details.html">
-					<img src="./assets/kridas-logo.png" alt="Zaapi">
-				</a>
-				<div class="content">
-					<span class="label">Application Development</span>
-					<h3>Development of Kridas Sports Platform</h3>
-					<p>Development of a sports management platform to streamline operations and enhance user experience.</p>
+		</div>
+		<div class="scroll-down" data-aos="fade-up" data-aos-delay="700">
+			<a href="#skills-section" aria-label="Scroll to skills section">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+	</section>
+	<section id="skills-section" class="skills-section">
+		<div class="container">
+			<div class="section-header" data-aos="fade-up">
+				<h2 class="section-title">Skills & Expertise</h2>
+				<p class="section-subtitle">My technical toolkit and proficiency levels</p>
+			</div>
+
+			<div class="skills-tabs" data-aos="fade-up" data-aos-delay="200">
+				<button class="tab-btn active" data-target="frontend">Frontend</button>
+				<button class="tab-btn" data-target="backend">Backend</button>
+				<button class="tab-btn" data-target="devops">DevOps</button>
+			</div>
+
+			<div class="skills-content">
+				<div class="tab-content active" id="frontend">
+					<div class="skills-container">
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/react.png" alt="React" width="40" height="40">
+								</div>
+								<div class="skill-level expert">Expert</div>
+							</div>
+							<h4>React & React Native</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 95%;"></div>
+								</div>
+								<span class="percentage">95%</span>
+							</div>
+							<ul class="skill-details">
+								<li>Component architecture</li>
+								<li>State management</li>
+								<li>Performance optimization</li>
+								<li>Custom hooks</li>
+							</ul>
+						</div>
+
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/javascriptJs.png" alt="JavaScript" width="40" height="40">
+								</div>
+								<div class="skill-level expert">Expert</div>
+							</div>
+							<h4>JavaScript</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 90%;"></div>
+								</div>
+								<span class="percentage">90%</span>
+							</div>
+							<ul class="skill-details">
+								<li>ES6+ features</li>
+								<li>Functional programming</li>
+								<li>Asynchronous patterns</li>
+								<li>DOM manipulation</li>
+							</ul>
+						</div>
+
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/typescriptIcon.png" alt="TypeScript" width="40" height="40">
+								</div>
+								<div class="skill-level advanced">Advanced</div>
+							</div>
+							<h4>TypeScript</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 85%;"></div>
+								</div>
+								<span class="percentage">85%</span>
+							</div>
+							<ul class="skill-details">
+								<li>Static typing</li>
+								<li>Interfaces & Types</li>
+								<li>Generic types</li>
+								<li>Type guards</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-content" id="backend">
+					<div class="skills-container">
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/nodejs.png" alt="Node.js" width="40" height="40">
+								</div>
+								<div class="skill-level expert">Expert</div>
+							</div>
+							<h4>Node.js</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 90%;"></div>
+								</div>
+								<span class="percentage">90%</span>
+							</div>
+							<ul class="skill-details">
+								<li>RESTful APIs</li>
+								<li>Express.js</li>
+								<li>Authentication</li>
+								<li>Database integration</li>
+							</ul>
+						</div>
+
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/nestjs.png" alt="NestJS" width="40" height="40">
+								</div>
+								<div class="skill-level advanced">Advanced</div>
+							</div>
+							<h4>NestJS</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 85%;"></div>
+								</div>
+								<span class="percentage">85%</span>
+							</div>
+							<ul class="skill-details">
+								<li>Modular architecture</li>
+								<li>Dependency injection</li>
+								<li>Middleware</li>
+								<li>GraphQL integration</li>
+							</ul>
+						</div>
+
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/mongodb.png" alt="MongoDB" width="40" height="40">
+								</div>
+								<div class="skill-level advanced">Advanced</div>
+							</div>
+							<h4>MongoDB</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 82%;"></div>
+								</div>
+								<span class="percentage">82%</span>
+							</div>
+							<ul class="skill-details">
+								<li>Schema design</li>
+								<li>Aggregation pipeline</li>
+								<li>Mongoose ODM</li>
+								<li>Performance optimization</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-content" id="devops">
+					<div class="skills-container">
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/docker.png" alt="Docker" width="40" height="40">
+								</div>
+								<div class="skill-level advanced">Advanced</div>
+							</div>
+							<h4>Docker</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 88%;"></div>
+								</div>
+								<span class="percentage">88%</span>
+							</div>
+							<ul class="skill-details">
+								<li>Containerization</li>
+								<li>Docker Compose</li>
+								<li>Multi-stage builds</li>
+								<li>Container orchestration</li>
+							</ul>
+						</div>
+
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/aws.png" alt="AWS" width="40" height="40">
+								</div>
+								<div class="skill-level advanced">Advanced</div>
+							</div>
+							<h4>AWS</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 80%;"></div>
+								</div>
+								<span class="percentage">80%</span>
+							</div>
+							<ul class="skill-details">
+								<li>EC2, S3, Lambda</li>
+								<li>CloudFormation</li>
+								<li>ECS, EKS</li>
+								<li>CI/CD Pipeline</li>
+							</ul>
+						</div>
+
+						<div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+							<div class="skill-header">
+								<div class="skill-icon">
+									<img src="./assets/jenkins.png" alt="Jenkins" width="40" height="40">
+								</div>
+								<div class="skill-level advanced">Advanced</div>
+							</div>
+							<h4>Jenkins/CI</h4>
+							<div class="progress-container">
+								<div class="progress-bar">
+									<div class="progress" style="width: 85%;"></div>
+								</div>
+								<span class="percentage">85%</span>
+							</div>
+							<ul class="skill-details">
+								<li>Pipeline as code</li>
+								<li>Automated testing</li>
+								<li>Continuous deployment</li>
+								<li>Integration with Git</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+	<section class="portfolio" id="case-studies">
+		<div class="container">
+			<div class="section-header" data-aos="fade-up">
+				<h2 class="section-title">My Work</h2>
+				<p class="section-subtitle">Featured projects I've built and contributed to</p>
+			</div>
+
+			<div class="portfolio-filter" data-aos="fade-up" data-aos-delay="100">
+				<button class="filter-btn active" data-filter="all">
+					<span class="btn-text">All Projects</span>
+					<span class="btn-count">3</span>
+				</button>
+				<button class="filter-btn" data-filter="mobile">
+					<span class="btn-text">Mobile Apps</span>
+					<span class="btn-count">3</span>
+				</button>
+				<button class="filter-btn" data-filter="web">
+					<span class="btn-text">Web Development</span>
+					<span class="btn-count">2</span>
+				</button>
+				<button class="filter-btn" data-filter="devops">
+					<span class="btn-text">DevOps Solutions</span>
+					<span class="btn-count">1</span>
+				</button>
+			</div>
+
+			<div class="portfolio-grid">
+				<!-- First project (existing) -->
+				<div class="portfolio-item" data-category="mobile web" data-aos="fade-up" data-aos-delay="200">
+					<div class="portfolio-card">
+						<div class="portfolio-image">
+							<img src="./assets/zaapi.jpeg" alt="Zaapi E-commerce Platform">
+							<div class="portfolio-overlay">
+								<div class="overlay-content">
+									<h4>E-commerce Platform</h4>
+									<p>An online shopping platform with robust features</p>
+									<a href="zaapi-details.html" class="view-project">
+										<span>View Project</span>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+											height="24">
+											<path fill="none" d="M0 0h24v24H0z" />
+											<path
+												d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+												fill="currentColor" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-content">
+							<div class="portfolio-category">E-commerce Platform</div>
+							<h3 class="portfolio-title">Zaapi E-commerce Platform</h3>
+							<p class="portfolio-description">A comprehensive online shopping platform to expand the
+								company's reach and increase sales with modern UX.</p>
+							<div class="portfolio-details">
+								<div class="tech-stack">
+									<div class="tech-tag">React Native</div>
+									<div class="tech-tag">Node.js</div>
+									<div class="tech-tag">AWS</div>
+								</div>
+								<a href="zaapi-details.html" class="portfolio-link">
+									<span>Case Study</span>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+										<path fill="none" d="M0 0h24v24H0z" />
+										<path
+											d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Second project (new) -->
+				<div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="300">
+					<div class="portfolio-card">
+						<div class="portfolio-image">
+							<img src="./assets/ecocash.png" alt="EcoCash Super App" style="object-fit: contain; width: 100%; height: 100%;">
+							<div class="portfolio-overlay">
+								<div class="overlay-content">
+									<h4>Super App</h4>
+									<p>All-in-one app for a telecom company</p>
+									<a href="ecocash-details.html" class="view-project">
+										<span>View Project</span>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+											height="24">
+											<path fill="none" d="M0 0h24v24H0z" />
+											<path
+												d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+												fill="currentColor" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-content">
+							<div class="portfolio-category">Super App - Telecom</div>
+							<h3 class="portfolio-title">EcoCash Super App</h3>
+							<p class="portfolio-description">A comprehensive mobile app that combines payment, social
+								networking, and service access for telecom customers.</p>
+							<div class="portfolio-details">
+								<div class="tech-stack">
+									<div class="tech-tag">React Native</div>
+									<div class="tech-tag">Redux</div>
+									<div class="tech-tag">Firebase</div>
+								</div>
+								<a href="ecocash-details.html" class="portfolio-link">
+									<span>Case Study</span>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+										<path fill="none" d="M0 0h24v24H0z" />
+										<path
+											d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Third project (new) -->
+				<div class="portfolio-item" data-category="web devops" data-aos="fade-up" data-aos-delay="400">
+					<div class="portfolio-card">
+						<div class="portfolio-image">
+							<img src="./assets/kridas-logo.png" alt="Kridas Sports Platform" style="object-fit: contain; width: 100%; height: 100%;">
+							<div class="portfolio-overlay">
+								<div class="overlay-content">
+									<h4>Sports Platform</h4>
+									<p>Comprehensive sports management system</p>
+									<a href="kridas-details.html" class="view-project">
+										<span>View Project</span>
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+											height="24">
+											<path fill="none" d="M0 0h24v24H0z" />
+											<path
+												d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+												fill="currentColor" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-content">
+							<div class="portfolio-category">Sports Management Platform</div>
+							<h3 class="portfolio-title">Kridas Sports Platform</h3>
+							<p class="portfolio-description">A sports management platform that streamlines operations
+								for teams, events, and player management with real-time analytics.</p>
+							<div class="portfolio-details">
+								<div class="tech-stack">
+									<div class="tech-tag">React</div>
+									<div class="tech-tag">Node.js</div>
+									<div class="tech-tag">Docker</div>
+								</div>
+								<a href="kridas-details.html" class="portfolio-link">
+									<span>Case Study</span>
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+										<path fill="none" d="M0 0h24v24H0z" />
+										<path
+											d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="testimonials" id="testimonials">
+		<div class="container">
+			<div class="section-header" data-aos="fade-up">
+				<h2 class="section-title">What Clients Say</h2>
+				<p class="section-subtitle">Feedback from people I've worked with</p>
+			</div>
+
+			<div class="testimonial-slider" data-aos="fade-up">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="testimonial-card">
+								<div class="testimonial-content">
+									<svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+										width="24" height="24">
+										<path fill="none" d="M0 0h24v24H0z" />
+										<path
+											d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"
+											fill="rgba(47,128,237,0.5)" />
+									</svg>
+									<p>Geenesh delivered an exceptional mobile app that exceeded our expectations. His
+										technical expertise and communication skills made the project a complete
+										success. I was impressed by his attention to detail and commitment to quality.
+									</p>
+									<div class="client-info">
+										<div class="client-avatar">
+											<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith">
+										</div>
+										<div>
+											<div class="client-name">John Smith</div>
+											<div class="client-role">CEO, TechStart Inc.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="testimonial-card">
+								<div class="testimonial-content">
+									<svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+										width="24" height="24">
+										<path fill="none" d="M0 0h24v24H0z" />
+										<path
+											d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"
+											fill="rgba(47,128,237,0.5)" />
+									</svg>
+									<p>Working with Geenesh on our e-commerce platform was a great experience. His
+										problem-solving skills helped us launch ahead of schedule. He was always
+										responsive and came up with innovative solutions to our challenges.</p>
+									<div class="client-info">
+										<div class="client-avatar">
+											<img src="https://randomuser.me/api/portraits/women/44.jpg"
+												alt="Sarah Johnson">
+										</div>
+										<div>
+											<div class="client-name">Sarah Johnson</div>
+											<div class="client-role">Product Manager, ShopEasy</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="testimonial-card">
+								<div class="testimonial-content">
+									<svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+										width="24" height="24">
+										<path fill="none" d="M0 0h24v24H0z" />
+										<path
+											d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804 .167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"
+											fill="rgba(47,128,237,0.5)" />
+									</svg>
+									<p>Geenesh's DevOps expertise transformed our deployment process. His implementation
+										of CI/CD pipelines significantly improved our team's productivity and reduced
+										our release cycles by 70%.</p>
+									<div class="client-info">
+										<div class="client-avatar">
+											<img src="https://randomuser.me/api/portraits/men/36.jpg"
+												alt="Michael Chen">
+										</div>
+										<div>
+											<div class="client-name">Michael Chen</div>
+											<div class="client-role">CTO, CloudTech Solutions</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+	</section>
+
 	<section class="contact" id="contact">
-		<div class="contact-container">
-			<h2 style="color:#333">Get In Touch</h2>
-			<form action="https://formspree.io/f/xjvnqdeg"
-			method="POST">
-				<input type="email" name="email" placeholder="Email" required>
-				<input type="text" placeholder="Name" name="name" required>
-				<textarea placeholder="Message" name="message" required></textarea>
-				<button class="button" type="submit">Submit</button>
-			</form>
+		<div class="container">
+			<div class="section-header" data-aos="fade-up">
+				<h2 class="section-title">Get In Touch</h2>
+				<p class="section-subtitle">Let's discuss your project and make it happen</p>
+			</div>
+
+			<div class="contact-wrapper" data-aos="fade-up">
+				<div class="contact-info">
+					<div class="contact-detail">
+						<div class="contact-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z" />
+								<path
+									d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm9.06 8.683L5.648 6.238 4.353 7.762l7.72 6.555 7.581-6.56-1.308-1.513-6.285 5.439z"
+									fill="currentColor" />
+							</svg>
+						</div>
+						<div class="detail-content">
+							<h3>Email Me</h3>
+							<p><a href="mailto:geenesh99@gmail.com">geenesh99@gmail.com</a></p>
+						</div>
+					</div>
+
+					<div class="contact-detail">
+						<div class="contact-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z" />
+								<path
+									d="M22.223 3.998a2.784 2.784 0 0 0-.631-.794l-.18-.155a3.275 3.275 0 0 0-2.167-.893c-.546.003-1.082.15-1.554.428l-3.773 2.19A3.218 3.218 0 0 0 12.58 6.74c-.355.676-.462 1.455-.306 2.203a19.162 19.162 0 0 1-4.3-3.024A19.1 19.1 0 0 1 4.95 1.614a3.11 3.11 0 0 0 .1 2.914 3.145 3.145 0 0 0 1.14 1.274l-.063.001c-.19.035-.371.079-.545.143a3.164 3.164 0 0 0-1.164.833 3.053 3.053 0 0 0-.738 1.598c-.06.398-.014.804.137 1.18.06.145.154.282.227.424a9.33 9.33 0 0 1-.716.354 3.294 3.294 0 0 0-1.291.912 3.052 3.052 0 0 0-.737 1.7c-.036.384-.001.776.106 1.145.438 1.496 1.827 2.55 3.431 2.604a15.37 15.37 0 0 1-2.46.338c-.275.014-.555.049-.83.01a1.425 1.425 0 0 0-.313-.011 1 1 0 0 0-.126.009 1.08 1.08 0 0 0-.208.035 1.027 1.027 0 0 0-.723.784c-.062.33.062.655.327.872.46.347 1.01.6 1.578.785a14.243 14.243 0 0 0 10.648-1.622 14.162 14.162 0 0 0 5.036-5.109 14.183 14.183 0 0 0 1.69-4.238c.08-.386.167-.799.13-1.195a2.328 2.328 0 0 1 .973-2.36 3.2 3.2 0 0 0 .67-.462c.114-.112.221-.23.316-.356a1.045 1.045 0 0 0 .208-.64c.001-.17-.042-.332-.141-.471a1.425 1.425 0 0 0-.253-.325 3.307 3.307 0 0 0-.767-.602z"
+									fill="currentColor" />
+							</svg>
+						</div>
+						<div class="detail-content">
+							<h3>LinkedIn</h3>
+							<p><a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank"
+									rel="noopener">Connect on LinkedIn</a></p>
+						</div>
+					</div>
+
+					<div class="contact-detail">
+						<div class="contact-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+								<path fill="none" d="M0 0h24v24H0z" />
+								<path
+									d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.29-2.333A17.9 17.9 0 0 1 8.027 13H4.062a8.008 8.008 0 0 0 5.648 6.667zM10.03 13c.151 2.439.848 4.73 1.97 6.752A15.905 15.905 0 0 0 13.97 13h-3.94zm9.908 0h-3.965a17.9 17.9 0 0 1-1.683 6.667A8.008 8.008 0 0 0 19.938 13zM4.062 11h3.965A17.9 17.9 0 0 1 9.71 4.333 8.008 8.008 0 0 0 4.062 11zm5.969 0h3.938A15.905 15.905 0 0 0 12 4.248 15.905 15.905 0 0 0 10.03 11zm4.259-6.667A17.9 17.9 0 0 1 15.938 11h3.965a8.008 8.008 0 0 0-5.648-6.667z"
+									fill="currentColor" />
+							</svg>
+						</div>
+						<div class="detail-content">
+							<h3>Upwork</h3>
+							<p><a href="https://www.upwork.com/freelancers/~0139519a2c11b8967b?mp_source=share"
+									target="_blank" rel="noopener">Hire me on Upwork</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-form-container" data-aos="zoom-in" data-aos-duration="800">
+					<form action="https://formspree.io/f/xjvnqdeg" method="POST" class="contact-form">
+						<div class="form-group">
+							<label for="email">Your Email</label>
+							<input type="email" id="email" name="email" required aria-label="Email"
+								placeholder="name@example.com">
+						</div>
+
+						<div class="form-group">
+							<label for="name">Your Name</label>
+							<input type="text" id="name" name="name" required aria-label="Name" placeholder="John Doe">
+						</div>
+
+						<div class="form-group">
+							<label for="message">Your Message</label>
+							<textarea id="message" name="message" required aria-label="Message"
+								placeholder="Tell me about your project..."></textarea>
+						</div>
+
+						<button class="button" type="submit">
+							<span>Send Message</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+								<path fill="none" d="M0 0h24v24H0z" />
+								<path
+									d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+									fill="currentColor" />
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	</section>
 	<div style="display: flex;width: 95%;justify-content: end;margin: 2rem;">
-		<a href="#" uk-totop uk-scroll style="color: black; cursor: pointer;"></a>
+		<a href="#" uk-totop uk-scroll style="color: black; cursor: pointer;" aria-label="Scroll to top"></a>
 	</div>
 	<footer>
+		<p>&copy; 2024 Geenesh S. All rights reserved.</p>
 	</footer>
-	<script async src="scripts.js"></script>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js" defer></script>
+	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+	<script defer>
+		document.addEventListener('DOMContentLoaded', function () {
+			AOS.init();
+		});
+	</script>
+	<script src="scripts.js" defer></script>
 </body>
 
 </html>

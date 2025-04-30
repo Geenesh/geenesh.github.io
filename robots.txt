@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://geenesh.github.io/sitemap.xml
