@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zaapi E-commerce Platform - Unified social media and e-commerce chat platform by Geenesh S">
-    <title>Zaapi E-commerce Platform - Unified Chat Commerce | Geenesh S</title>
+    <meta name="description" content="ISNEE - Event management system for motorsport enthusiasts by Geenesh S">
+    <title>ISNEE - Motorsport Event Management | Geenesh S</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -144,30 +144,31 @@
             font-size: 0.875rem;
         }
 
-        /* Screenshots */
-        .screenshots-grid {
+        /* Features List */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 2rem;
         }
 
-        .screenshot-item {
-            text-align: center;
-        }
-
-        .screenshot-item img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 8px;
+        .feature-card {
+            background-color: #fafafa;
             border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
         }
 
-        .screenshot-item .caption {
-            margin-top: 0.5rem;
-            font-size: 0.875rem;
-            color: #666666;
+        .feature-title {
+            font-size: 1.125rem;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #555555;
+            font-size: 0.95rem;
         }
 
         /* Responsibilities List */
@@ -227,9 +228,13 @@
                 gap: 1rem;
             }
 
-            .screenshots-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .feature-card {
+                padding: 1.25rem;
             }
         }
     </style>
@@ -249,20 +254,20 @@
         <div class="container">
             <!-- Project Header -->
             <div class="project-header">
-                <h1 class="project-title">Zaapi E-commerce Platform</h1>
-                <p class="project-subtitle">Unified Chat Integration Across Social Media and E-commerce</p>
+                <h1 class="project-title">ISNEE</h1>
+                <p class="project-subtitle">Event Management System for Motorsport Enthusiasts</p>
                 <div class="project-meta">
                     <div class="meta-item">
                         <div class="meta-label">Platform</div>
-                        <div class="meta-value">Mobile App</div>
+                        <div class="meta-value">Web Application</div>
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Category</div>
-                        <div class="meta-value">E-commerce</div>
+                        <div class="meta-value">Event Management</div>
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Role</div>
-                        <div class="meta-value">Mobile Developer</div>
+                        <div class="meta-value">Full Stack Developer</div>
                     </div>
                 </div>
             </div>
@@ -271,10 +276,10 @@
             <section class="content-section">
                 <h2 class="section-title">Project Overview</h2>
                 <p class="description">
-                    Zaapi is an innovative e-commerce platform designed to expand company reach and increase sales by creating a comprehensive online presence. What sets Zaapi apart is its unique integration of unified chat functionality across all social media channels and e-commerce platforms, making it the only platform in Thailand with this capability.
+                    ISNEE is a comprehensive event management platform specifically designed for motorsport enthusiasts and racing communities. The system streamlines the entire event lifecycle from initial planning and participant registration to race day coordination and post-event analytics.
                 </p>
                 <p class="description">
-                    The platform offers a user-friendly interface, secure transactions, and various advanced features to help businesses manage their online stores efficiently while maintaining seamless communication with customers across multiple channels from a single dashboard.
+                    The platform addresses the unique challenges of motorsport event organization by providing specialized tools for race registrations, participant management, timing systems integration, safety protocol management, and real-time event coordination, making it an essential tool for racing organizers and participants alike.
                 </p>
             </section>
 
@@ -282,40 +287,57 @@
             <section class="content-section">
                 <h2 class="section-title">Technology Stack</h2>
                 <div class="tech-stack">
-                    <span class="tech-tag">React Native</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express.js</span>
-                    <span class="tech-tag">AWS</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Redux</span>
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">NestJS</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">JWT Authentication</span>
                     <span class="tech-tag">Socket.io</span>
-                    <span class="tech-tag">Payment Gateway APIs</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
                 </div>
             </section>
 
-            <!-- Screenshots -->
+            <!-- Key Features -->
             <section class="content-section">
-                <h2 class="section-title">Application Screenshots</h2>
-                <div class="screenshots-grid">
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-splash.jpeg" alt="Zaapi Splash Screen">
-                        <div class="caption">Splash Screen</div>
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Event Creation & Management</h3>
+                        <p class="feature-description">
+                            Comprehensive event setup with track details, race categories, timing schedules, safety requirements, and participant capacity management.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-filters.jpeg" alt="Zaapi Filters">
-                        <div class="caption">Product Filters</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Registration System</h3>
+                        <p class="feature-description">
+                            Streamlined participant registration with vehicle verification, license validation, insurance checks, and category assignment.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-profile.jpeg" alt="Zaapi Profile">
-                        <div class="caption">User Profile</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Real-time Race Management</h3>
+                        <p class="feature-description">
+                            Live race coordination with timing integration, position tracking, incident reporting, and real-time leaderboard updates.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-qr.jpeg" alt="Zaapi QR Code">
-                        <div class="caption">QR Code Scanner</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Participant Portal</h3>
+                        <p class="feature-description">
+                            Dedicated participant dashboard for registration management, event schedules, race results, and communication with organizers.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-settings.jpeg" alt="Zaapi Settings">
-                        <div class="caption">Settings Screen</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Safety & Compliance</h3>
+                        <p class="feature-description">
+                            Integrated safety protocol management, technical inspection tracking, and compliance verification for motorsport regulations.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Analytics & Reporting</h3>
+                        <p class="feature-description">
+                            Comprehensive event analytics, performance reports, participant statistics, and financial tracking for event organizers.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -325,32 +347,32 @@
                 <h2 class="section-title">Development Responsibilities</h2>
                 <ul class="responsibilities-list">
                     <li>
-                        <div class="responsibility-title">Mobile App Development</div>
-                        <div class="responsibility-desc">Built comprehensive React Native e-commerce application with focus on performance, user experience, and cross-platform compatibility.</div>
+                        <div class="responsibility-title">Frontend Development</div>
+                        <div class="responsibility-desc">Built responsive React.js application with TypeScript for type safety and improved developer experience.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">Chat Integration System</div>
-                        <div class="responsibility-desc">Developed unified chat integration system connecting multiple social media platforms and e-commerce channels into a single interface.</div>
+                        <div class="responsibility-title">Backend API Development</div>
+                        <div class="responsibility-desc">Developed robust NestJS backend with modular architecture, implementing RESTful APIs and real-time WebSocket connections.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">UI/UX Implementation</div>
-                        <div class="responsibility-desc">Translated design mockups into responsive mobile interfaces ensuring consistency with Zaapi's brand guidelines and optimal user experience.</div>
+                        <div class="responsibility-title">Database Architecture</div>
+                        <div class="responsibility-desc">Designed and implemented PostgreSQL database schema optimized for complex motorsport event data and participant relationships.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">E-commerce Features</div>
-                        <div class="responsibility-desc">Implemented core e-commerce functionality including product catalogs, shopping cart, checkout process, order management, and inventory tracking.</div>
+                        <div class="responsibility-title">Real-time Features</div>
+                        <div class="responsibility-desc">Implemented Socket.io for real-time race updates, live timing data, and instant communication between organizers and participants.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">API Integration</div>
-                        <div class="responsibility-desc">Integrated backend services, payment gateways, social media APIs, and third-party services for comprehensive platform functionality.</div>
-                    </li>
-                    <li>
-                        <div class="responsibility-title">Real-time Communication</div>
-                        <div class="responsibility-desc">Implemented real-time messaging features using Socket.io for instant customer communication and live chat support across platforms.</div>
+                        <div class="responsibility-title">Authentication & Authorization</div>
+                        <div class="responsibility-desc">Built secure authentication system with role-based access control for organizers, participants, and officials.</div>
                     </li>
                     <li>
                         <div class="responsibility-title">Performance Optimization</div>
-                        <div class="responsibility-desc">Optimized application performance for handling large product catalogs, multiple chat channels, and concurrent user sessions.</div>
+                        <div class="responsibility-desc">Implemented Redis caching for improved performance and optimized database queries for handling large-scale event data.</div>
+                    </li>
+                    <li>
+                        <div class="responsibility-title">DevOps & Deployment</div>
+                        <div class="responsibility-desc">Containerized application with Docker and deployed on AWS with automated CI/CD pipelines for reliable production deployment.</div>
                     </li>
                 </ul>
             </section>

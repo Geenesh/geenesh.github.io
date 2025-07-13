@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zaapi E-commerce Platform - Unified social media and e-commerce chat platform by Geenesh S">
-    <title>Zaapi E-commerce Platform - Unified Chat Commerce | Geenesh S</title>
+    <meta name="description" content="Namma Kutira - Rental property management mobile application by Geenesh S">
+    <title>Namma Kutira - Property Management App | Geenesh S</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -144,30 +144,31 @@
             font-size: 0.875rem;
         }
 
-        /* Screenshots */
-        .screenshots-grid {
+        /* Features List */
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 2rem;
         }
 
-        .screenshot-item {
-            text-align: center;
-        }
-
-        .screenshot-item img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 8px;
+        .feature-card {
+            background-color: #fafafa;
             border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
         }
 
-        .screenshot-item .caption {
-            margin-top: 0.5rem;
-            font-size: 0.875rem;
-            color: #666666;
+        .feature-title {
+            font-size: 1.125rem;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #555555;
+            font-size: 0.95rem;
         }
 
         /* Responsibilities List */
@@ -227,9 +228,13 @@
                 gap: 1rem;
             }
 
-            .screenshots-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .feature-card {
+                padding: 1.25rem;
             }
         }
     </style>
@@ -249,8 +254,8 @@
         <div class="container">
             <!-- Project Header -->
             <div class="project-header">
-                <h1 class="project-title">Zaapi E-commerce Platform</h1>
-                <p class="project-subtitle">Unified Chat Integration Across Social Media and E-commerce</p>
+                <h1 class="project-title">Namma Kutira</h1>
+                <p class="project-subtitle">Rental Property Management Mobile Application</p>
                 <div class="project-meta">
                     <div class="meta-item">
                         <div class="meta-label">Platform</div>
@@ -258,11 +263,11 @@
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Category</div>
-                        <div class="meta-value">E-commerce</div>
+                        <div class="meta-value">Property Management</div>
                     </div>
                     <div class="meta-item">
                         <div class="meta-label">Role</div>
-                        <div class="meta-value">Mobile Developer</div>
+                        <div class="meta-value">Full Stack Developer</div>
                     </div>
                 </div>
             </div>
@@ -271,10 +276,10 @@
             <section class="content-section">
                 <h2 class="section-title">Project Overview</h2>
                 <p class="description">
-                    Zaapi is an innovative e-commerce platform designed to expand company reach and increase sales by creating a comprehensive online presence. What sets Zaapi apart is its unique integration of unified chat functionality across all social media channels and e-commerce platforms, making it the only platform in Thailand with this capability.
+                    Namma Kutira is a comprehensive rental property management mobile application designed to streamline interactions between landlords and tenants. The platform facilitates efficient property oversight, rent collection, maintenance request handling, and communication management, making property management more organized and transparent for all stakeholders.
                 </p>
                 <p class="description">
-                    The platform offers a user-friendly interface, secure transactions, and various advanced features to help businesses manage their online stores efficiently while maintaining seamless communication with customers across multiple channels from a single dashboard.
+                    The application addresses common challenges in property management by providing digital solutions for rent tracking, maintenance coordination, tenant communication, and property documentation, ultimately improving the rental experience for both property owners and tenants.
                 </p>
             </section>
 
@@ -285,37 +290,53 @@
                     <span class="tech-tag">React Native</span>
                     <span class="tech-tag">Node.js</span>
                     <span class="tech-tag">Express.js</span>
-                    <span class="tech-tag">AWS</span>
                     <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">JWT Authentication</span>
+                    <span class="tech-tag">Firebase Push Notifications</span>
+                    <span class="tech-tag">AWS S3</span>
                     <span class="tech-tag">Redux</span>
-                    <span class="tech-tag">Socket.io</span>
-                    <span class="tech-tag">Payment Gateway APIs</span>
                 </div>
             </section>
 
-            <!-- Screenshots -->
+            <!-- Key Features -->
             <section class="content-section">
-                <h2 class="section-title">Application Screenshots</h2>
-                <div class="screenshots-grid">
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-splash.jpeg" alt="Zaapi Splash Screen">
-                        <div class="caption">Splash Screen</div>
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Property Management</h3>
+                        <p class="feature-description">
+                            Comprehensive property listing management with photos, descriptions, rental terms, and tenant assignment capabilities.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-filters.jpeg" alt="Zaapi Filters">
-                        <div class="caption">Product Filters</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Rent Collection & Tracking</h3>
+                        <p class="feature-description">
+                            Automated rent reminders, payment tracking, receipt generation, and overdue payment notifications for seamless financial management.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-profile.jpeg" alt="Zaapi Profile">
-                        <div class="caption">User Profile</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Maintenance Requests</h3>
+                        <p class="feature-description">
+                            Digital maintenance request system allowing tenants to report issues with photos and enabling landlords to track repair progress.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-qr.jpeg" alt="Zaapi QR Code">
-                        <div class="caption">QR Code Scanner</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Tenant Communication</h3>
+                        <p class="feature-description">
+                            In-app messaging system for direct communication between landlords and tenants, with notification support for important updates.
+                        </p>
                     </div>
-                    <div class="screenshot-item">
-                        <img src="./assets/zaapi-settings.jpeg" alt="Zaapi Settings">
-                        <div class="caption">Settings Screen</div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Document Management</h3>
+                        <p class="feature-description">
+                            Secure storage and management of lease agreements, property documents, and tenant information with easy access and sharing.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 class="feature-title">Analytics & Reporting</h3>
+                        <p class="feature-description">
+                            Property performance analytics, rent collection reports, and maintenance cost tracking for informed decision making.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -326,31 +347,31 @@
                 <ul class="responsibilities-list">
                     <li>
                         <div class="responsibility-title">Mobile App Development</div>
-                        <div class="responsibility-desc">Built comprehensive React Native e-commerce application with focus on performance, user experience, and cross-platform compatibility.</div>
+                        <div class="responsibility-desc">Built cross-platform mobile application using React Native with intuitive user interfaces for both landlords and tenants.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">Chat Integration System</div>
-                        <div class="responsibility-desc">Developed unified chat integration system connecting multiple social media platforms and e-commerce channels into a single interface.</div>
+                        <div class="responsibility-title">Backend API Development</div>
+                        <div class="responsibility-desc">Developed RESTful APIs using Node.js and Express.js for user management, property operations, and notification services.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">UI/UX Implementation</div>
-                        <div class="responsibility-desc">Translated design mockups into responsive mobile interfaces ensuring consistency with Zaapi's brand guidelines and optimal user experience.</div>
+                        <div class="responsibility-title">Database Design & Implementation</div>
+                        <div class="responsibility-desc">Designed and implemented MongoDB database schema for efficient storage of property data, user information, and transaction records.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">E-commerce Features</div>
-                        <div class="responsibility-desc">Implemented core e-commerce functionality including product catalogs, shopping cart, checkout process, order management, and inventory tracking.</div>
+                        <div class="responsibility-title">Authentication & Security</div>
+                        <div class="responsibility-desc">Implemented secure user authentication with JWT tokens and role-based access control for landlords and tenants.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">API Integration</div>
-                        <div class="responsibility-desc">Integrated backend services, payment gateways, social media APIs, and third-party services for comprehensive platform functionality.</div>
+                        <div class="responsibility-title">Cloud Integration</div>
+                        <div class="responsibility-desc">Integrated AWS S3 for document storage and Firebase for push notifications to enhance user engagement and data management.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">Real-time Communication</div>
-                        <div class="responsibility-desc">Implemented real-time messaging features using Socket.io for instant customer communication and live chat support across platforms.</div>
+                        <div class="responsibility-title">Payment Integration</div>
+                        <div class="responsibility-desc">Integrated payment gateway solutions for secure rent collection and automated payment processing.</div>
                     </li>
                     <li>
-                        <div class="responsibility-title">Performance Optimization</div>
-                        <div class="responsibility-desc">Optimized application performance for handling large product catalogs, multiple chat channels, and concurrent user sessions.</div>
+                        <div class="responsibility-title">Testing & Deployment</div>
+                        <div class="responsibility-desc">Conducted comprehensive testing across iOS and Android platforms and managed deployment to app stores.</div>
                     </li>
                 </ul>
             </section>

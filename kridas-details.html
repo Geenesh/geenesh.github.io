@@ -1,178 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Kridas Sports Platform - Global sports networking platform by Geenesh S">
+    <title>Kridas Sports Platform - Global Sports Networking | Geenesh S</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <title>Kridas App</title>
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
+        /* Base Styles */
+        * {
             margin: 0;
             padding: 0;
-            background: #e6e5e5;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        header {
-            background: #ffffff;
-            color: #000000;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #ffffff;
         }
 
-        .header-container {
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.5rem 0;
+        }
+
+        .header-content {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-        }
-
-        .header-container a {
-            text-decoration: none;
-            color: #000000;
-            font-size: 18px;
-        }
-
-        .header-container a i {
-            margin-right: 8px;
-        }
-
-        .header-container h1 {
-            font-size: 24px;
-            margin: 0 20px;
-        }
-
-        .header-container p {
-            margin: 0;
-            font-size: 16px;
-            color: #6c757d;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 40px;
-            background: #fff;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-bottom: 5rem;
-        }
-
-        h2 {
-            color: #2f80ed;
-            font-size: 2rem;
-            margin-top: 0;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .screenshots {
-            display: flex;
             gap: 1rem;
+        }
+
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .back-link::before {
+            content: "←";
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 3rem 0;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.25rem;
+            color: #666666;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-meta {
+            display: flex;
             justify-content: center;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
-        .screenshots img {
+        .meta-item {
+            text-align: center;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #555555;
+            margin-bottom: 2rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background-color: #f0f0f0;
+            color: #333333;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        /* Screenshots */
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .screenshot-item {
+            text-align: center;
+        }
+
+        .screenshot-item img {
+            width: 100%;
             max-width: 200px;
             height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
         }
 
-        .screenshots img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        .screenshot-item .caption {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #666666;
         }
 
-        footer {
+        /* Responsibilities List */
+        .responsibilities-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .responsibilities-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .responsibilities-list li:last-child {
+            border-bottom: none;
+        }
+
+        .responsibility-title {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+        }
+
+        .responsibility-desc {
+            color: #555555;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #fafafa;
+            border-top: 1px solid #e0e0e0;
+            padding: 2rem 0;
             text-align: center;
-            padding: 20px;
-            background:  rgb(255, 255, 255);
-            color: #000000;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            margin-top: 4rem;
         }
 
+        .footer p {
+            color: #666666;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            header h1 {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .project-title {
                 font-size: 2rem;
             }
 
-            main {
-                margin: 20px;
-                padding: 10px;
+            .project-subtitle {
+                font-size: 1.125rem;
             }
 
-            h2 {
-                font-size: 1.5rem;
+            .project-meta {
+                gap: 1rem;
             }
 
-            p {
-                font-size: 1rem;
-            }
-
-            .screenshots {
-                gap: 2rem;
+            .screenshots-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
             }
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <div class="header-container">
-            <a href="index.html"><i class="fas fa-arrow-left"></i> Go Home</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="back-link">Back to Portfolio</a>
+            </div>
         </div>
-        <div style="display: flex;flex-direction: row;width: 100%;align-items: center;justify-content: center;">
-            <img src="./assets/kridas-logo.png" alt="Kridas Login" width="500">
-        </div>
-            <p>One platform for all - bringing all stakeholders within the sporting industry together. <br/>Create your unique sporting profile and start curating your global network.</p>
     </header>
-    <main>
-            <h2 style="color: #2f80ed;">About Kridas:</h2>
-        <p>Global Sports networking and career platform that provides expansion, collaboration, sponsorship and marketing opportunities.</p>
 
-        <h2>Screenshots:</h2>
-        <div class="screenshots">
-            <img src="./assets/kridas-login.png" alt="Kridas Login">
-            <img src="./assets/kridas-feed.png" alt="Kridas Feed">
-            <img src="./assets/kridas-events.png" alt="Kridas Events">
-            <img src="./assets/kridas-products.png" alt="Kridas products">
-            <img src="./assets/kridas-page.png" alt="Kridas page">
-            <img src="./assets/kridas-profile.png" alt="Kridas profile">
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="project-header">
+                <h1 class="project-title">Kridas Sports Platform</h1>
+                <p class="project-subtitle">Global Sports Networking and Career Platform</p>
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Platform</div>
+                        <div class="meta-value">Web & Mobile</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Category</div>
+                        <div class="meta-value">Sports Networking</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Role</div>
+                        <div class="meta-value">Full Stack Developer</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <section class="content-section">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="description">
+                    Kridas is a global sports networking and career platform that provides expansion, collaboration, sponsorship and marketing opportunities for all stakeholders within the sporting industry. The platform brings together athletes, coaches, clubs, sponsors, and sports enthusiasts to create their unique sporting profiles and build a global network.
+                </p>
+                <p class="description">
+                    The platform serves as a comprehensive ecosystem for the sports industry, facilitating connections, career development, and business opportunities while promoting sports culture and community building across different disciplines and geographical boundaries.
+                </p>
+            </section>
+
+            <!-- Technology Stack -->
+            <section class="content-section">
+                <h2 class="section-title">Technology Stack</h2>
+                <div class="tech-stack">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">GraphQL</span>
+                    <span class="tech-tag">Redis</span>
+                </div>
+            </section>
+
+            <!-- Screenshots -->
+            <section class="content-section">
+                <h2 class="section-title">Platform Screenshots</h2>
+                <div class="screenshots-grid">
+                    <div class="screenshot-item">
+                        <img src="./assets/kridas-login.png" alt="Kridas Login">
+                        <div class="caption">Login Interface</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="./assets/kridas-feed.png" alt="Kridas Feed">
+                        <div class="caption">Social Feed</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="./assets/kridas-events.png" alt="Kridas Events">
+                        <div class="caption">Events Management</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="./assets/kridas-products.png" alt="Kridas Products">
+                        <div class="caption">Sports Products</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="./assets/kridas-page.png" alt="Kridas Page">
+                        <div class="caption">Organization Pages</div>
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="./assets/kridas-profile.png" alt="Kridas Profile">
+                        <div class="caption">User Profiles</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Development Responsibilities -->
+            <section class="content-section">
+                <h2 class="section-title">Development Responsibilities</h2>
+                <ul class="responsibilities-list">
+                    <li>
+                        <div class="responsibility-title">Full Stack Development</div>
+                        <div class="responsibility-desc">Built comprehensive web and mobile applications using React and React Native with focus on cross-platform compatibility and performance.</div>
+                    </li>
+                    <li>
+                        <div class="responsibility-title">Backend Architecture</div>
+                        <div class="responsibility-desc">Developed scalable backend systems using Node.js and Express.js with GraphQL APIs for efficient data querying and real-time features.</div>
+                    </li>
+                    <li>
+                        <div class="responsibility-title">Database Design</div>
+                        <div class="responsibility-desc">Designed and implemented MongoDB database schema for complex sports networking data, user relationships, and content management.</div>
+                    </li>
+                    <li>
+                        <div class="responsibility-title">Social Features Implementation</div>
+                        <div class="responsibility-desc">Built social networking features including user profiles, feeds, messaging, event management, and community interaction tools.</div>
+                    </li>
+                    <li>
+                        <div class="responsibility-title">Performance Optimization</div>
+                        <div class="responsibility-desc">Implemented Redis caching, database query optimization, and code splitting to ensure fast loading times and smooth user experience.</div>
+                    </li>
+                    <li>
+                        <div class="responsibility-title">DevOps & Deployment</div>
+                        <div class="responsibility-desc">Containerized applications using Docker and managed deployment infrastructure to ensure reliable and scalable platform operation.</div>
+                    </li>
+                    <li>
+                        <div class="responsibility-title">Feature Development</div>
+                        <div class="responsibility-desc">Developed specialized sports industry features including athlete portfolios, sponsorship matching, event coordination, and marketplace functionality.</div>
+                    </li>
+                </ul>
+            </section>
         </div>
-        <h2 style="margin-top: 2rem;">Responsibilities:</h2>
-        <ul style="line-height: 2rem;">
-            <li><strong>App Development:</strong> Implement new features using React Native; write clean, efficient code.</li>
-            <li><strong>UI/UX Implementation:</strong> Translate designs into responsive interfaces; ensure consistency with Kridas's brand.</li>
-            <li><strong>Performance Optimization:</strong> Optimize app speed and scalability; fix performance issues and bugs.</li>
-            <li><strong>Integration with Backend Services:</strong> Integrate APIs and services; ensure efficient data rendering.</li>
-            <li><strong>Cross-Platform Compatibility:</strong> Ensure smooth operation on iOS and Android; address platform-specific issues.</li>
-            <li><strong>Code Review and Collaboration:</strong> Participate in code reviews; collaborate using version control systems like Git.</li>
-            <li><strong>Documentation:</strong> Create and maintain technical documentation; document features and workflows.</li>
-            <li><strong>User Feedback and Iteration:</strong> Analyze user feedback; iterate on features based on feedback and requirements.</li>
-            <li><strong>Security Best Practices:</strong> Implement security best practices; update app to address vulnerabilities.</li>
-        </ul>
-        
     </main>
-    <footer>
-        &copy; 2024 Geenesh S. All rights reserved.
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Geenesh S. All rights reserved.</p>
+        </div>
     </footer>
 </body>
-
 </html>
