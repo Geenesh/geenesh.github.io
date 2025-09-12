@@ -11,10 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollEffects();
     initializeFormHandling();
     initializeInteractions();
-    initializeProjectShowcase();
+    initializeProjectModals();
+    initializeCarousels();
+    // Project showcase removed - using simple cards now
 });
 
-// Hero Animations
+// Simplified Animations
 function initializeAnimations() {
     if (prefersReducedMotion) {
         // Show all elements immediately for users who prefer reduced motion
@@ -25,207 +27,150 @@ function initializeAnimations() {
         return;
     }
 
-    // Hero entrance animation
-    const heroTimeline = gsap.timeline();
-    
-    heroTimeline
-        .to('.title-line', {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: 'power3.out'
-        })
-        .to('.hero-subtitle', {
+    // Simple hero entrance animation
+    gsap.fromTo(['.title-line', '.hero-subtitle', '.hero-actions'], {
+        opacity: 0,
+        y: 30
+    }, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power2.out'
+    });
+
+    gsap.fromTo('.code-window', {
+        opacity: 0,
+        scale: 0.95
+    }, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.6,
+        delay: 0.3,
+        ease: 'power2.out'
+    });
+
+    // Simple scroll-triggered animations
+    gsap.utils.toArray('section:not(.hero)').forEach((section) => {
+        gsap.fromTo(section, {
+            opacity: 0,
+            y: 30
+        }, {
             opacity: 1,
             y: 0,
             duration: 0.6,
-            ease: 'power2.out'
-        }, '-=0.4')
-        .to('.hero-actions', {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power2.out'
-        }, '-=0.3')
-        .to('.code-window', {
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: section,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+
+    // Simple stats animation
+    gsap.utils.toArray('.stat-number').forEach(stat => {
+        gsap.fromTo(stat, {
+            opacity: 0,
+            scale: 0.8
+        }, {
             opacity: 1,
             scale: 1,
-            duration: 0.8,
-            ease: 'power2.out'
-        }, '-=0.6');
-
-    // Typing effect for code content
-    const codeContent = document.querySelector('.code-content code');
-    if (codeContent) {
-        const originalText = codeContent.innerHTML;
-        codeContent.innerHTML = '';
-        
-        gsap.delayedCall(1.5, () => {
-            typeText(codeContent, originalText, 30);
-        });
-    }
-
-    // Scroll-triggered animations for sections
-    gsap.utils.toArray('section:not(.hero)').forEach((section, index) => {
-        gsap.fromTo(section, 
-            { 
-                opacity: 0, 
-                y: 60 
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    end: 'bottom 20%',
-                    toggleActions: 'play none none reverse'
-                }
-            }
-        );
-    });
-
-    // Animated stats counters
-    gsap.utils.toArray('.stat-number').forEach(stat => {
-        const finalNumber = stat.textContent;
-        const isPlus = finalNumber.includes('+');
-        const numericValue = parseInt(finalNumber.replace(/[^\d]/g, ''));
-        
-        ScrollTrigger.create({
-            trigger: stat,
-            start: 'top 80%',
-            onEnter: () => {
-                gsap.fromTo(stat, 
-                    { textContent: 0 },
-                    {
-                        textContent: numericValue,
-                        duration: 2,
-                        ease: 'power2.out',
-                        snap: { textContent: 1 },
-                        onUpdate: function() {
-                            stat.textContent = Math.ceil(this.targets()[0].textContent) + (isPlus ? '+' : '');
-                        }
-                    }
-                );
+            duration: 0.5,
+            ease: 'back.out(1.7)',
+            scrollTrigger: {
+                trigger: stat,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
             }
         });
     });
 
-    // Project showcase animation
-    const projectShowcase = document.querySelector('.project-showcase');
-    if (projectShowcase) {
-        gsap.fromTo(projectShowcase,
-            {
-                opacity: 0,
-                y: 40,
-                scale: 0.95
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.8,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: projectShowcase,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
+    // Simple project cards animation
+    gsap.utils.toArray('.project-card').forEach(card => {
+        gsap.fromTo(card, {
+            opacity: 0,
+            y: 30
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 85%'
             }
-        );
-    }
-
-    // Tech items animation
-    gsap.utils.toArray('.tech-category').forEach(category => {
-        const items = category.querySelectorAll('.tech-item');
-        
-        gsap.fromTo(items,
-            {
-                opacity: 0,
-                y: 20,
-                scale: 0.8
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: 'back.out(1.7)',
-                scrollTrigger: {
-                    trigger: category,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
-            }
-        );
+        });
     });
 
-    // Skill items hover animations
+    // Simplified tech items animation
+    gsap.utils.toArray('.tech-item').forEach(item => {
+        gsap.fromTo(item, {
+            opacity: 0,
+            y: 15
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 90%'
+            }
+        });
+    });
+
+    // Simple skill items animation
     gsap.utils.toArray('.skill-item').forEach(item => {
-        const icon = item.querySelector('.skill-icon');
-        
-        item.addEventListener('mouseenter', () => {
-            gsap.to(icon, {
-                scale: 1.2,
-                rotation: 360,
-                duration: 0.6,
-                ease: 'back.out(1.7)'
-            });
-        });
-        
-        item.addEventListener('mouseleave', () => {
-            gsap.to(icon, {
-                scale: 1,
-                rotation: 0,
-                duration: 0.4,
-                ease: 'power2.out'
-            });
+        gsap.fromTo(item, {
+            opacity: 0,
+            y: 15
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 90%'
+            }
         });
     });
 
-    // Contact form animations
+    // Simple contact form animation
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        const formGroups = contactForm.querySelectorAll('.form-group');
-        
-        gsap.fromTo(formGroups,
-            {
-                opacity: 0,
-                x: -30
-            },
-            {
-                opacity: 1,
-                x: 0,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: contactForm,
-                    start: 'top 85%',
-                    toggleActions: 'play none none reverse'
-                }
+        gsap.fromTo(contactForm, {
+            opacity: 0,
+            y: 20
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: contactForm,
+                start: 'top 90%'
             }
-        );
+        });
     }
+
+    // Show code content immediately
+    showCodeContent();
 }
 
-// Typing effect function
-function typeText(element, text, speed = 50) {
-    let index = 0;
-    
-    function type() {
-        if (index < text.length) {
-            element.innerHTML = text.slice(0, index + 1);
-            index++;
-            setTimeout(type, speed);
-        }
+// Simple code content display
+function showCodeContent() {
+    const codeContent = document.querySelector('.code-content code');
+    if (codeContent) {
+        gsap.fromTo(codeContent, {
+            opacity: 0
+        }, {
+            opacity: 1,
+            duration: 0.6,
+            delay: 0.5
+        });
     }
-    
-    type();
 }
 
 // Navigation functionality
@@ -395,21 +340,7 @@ function initializeScrollEffects() {
         );
     });
 
-    // Custom cursor effect for interactive elements
-    const cursor = createCustomCursor();
-    if (cursor) {
-        const interactiveElements = document.querySelectorAll('.btn, .nav-link, .tech-item, .project-card');
-        
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                gsap.to(cursor, { scale: 1.5, duration: 0.3 });
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                gsap.to(cursor, { scale: 1, duration: 0.3 });
-            });
-        });
-    }
+    // Removed custom cursor for cleaner experience
 }
 
 function createCustomCursor() {
@@ -494,23 +425,15 @@ function initializeFormHandling() {
             }
         });
 
-        // Form input animations
+        // Simple form validation feedback
         const inputs = contactForm.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
-            input.addEventListener('focus', () => {
-                gsap.to(input, {
-                    scale: 1.02,
-                    duration: 0.3,
-                    ease: 'power2.out'
-                });
+            input.addEventListener('invalid', () => {
+                input.style.borderColor = 'var(--color-danger)';
             });
             
-            input.addEventListener('blur', () => {
-                gsap.to(input, {
-                    scale: 1,
-                    duration: 0.3,
-                    ease: 'power2.out'
-                });
+            input.addEventListener('input', () => {
+                input.style.borderColor = '';
             });
         });
     }
@@ -537,65 +460,26 @@ function showNotification(message, type = 'info') {
     
     document.body.appendChild(notification);
     
-    // Animate in
-    gsap.to(notification, {
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-        ease: 'power2.out'
-    });
+    // Simple show/hide
+    notification.style.transform = 'translateX(0)';
+    notification.style.opacity = '1';
     
     // Auto remove after 5 seconds
-    gsap.delayedCall(5, () => {
-        gsap.to(notification, {
-            x: '100%',
-            opacity: 0,
-            duration: 0.5,
-            ease: 'power2.in',
-            onComplete: () => {
-                notification.remove();
-            }
-        });
-    });
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 300);
+    }, 5000);
     
     // Click to dismiss
     notification.addEventListener('click', () => {
-        gsap.to(notification, {
-            x: '100%',
-            opacity: 0,
-            duration: 0.3,
-            ease: 'power2.in',
-            onComplete: () => {
-                notification.remove();
-            }
-        });
+        notification.style.opacity = '0';
+        setTimeout(() => notification.remove(), 300);
     });
 }
 
-// Interactive microanimations
+// Simple interactions
 function initializeInteractions() {
-    // Button hover effects
-    gsap.utils.toArray('.btn').forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            if (!prefersReducedMotion) {
-                gsap.to(button, {
-                    scale: 1.05,
-                    duration: 0.3,
-                    ease: 'power2.out'
-                });
-            }
-        });
-        
-        button.addEventListener('mouseleave', () => {
-            if (!prefersReducedMotion) {
-                gsap.to(button, {
-                    scale: 1,
-                    duration: 0.3,
-                    ease: 'power2.out'
-                });
-            }
-        });
-    });
+    // Basic button interactions handled by CSS
 
     // Tech item hover effects
     gsap.utils.toArray('.tech-item').forEach(item => {
@@ -622,32 +506,7 @@ function initializeInteractions() {
         });
     });
 
-    // Project card interactive effects
-    gsap.utils.toArray('.project-card').forEach(card => {
-        const phoneContainer = card.querySelector('.phone-mockup');
-        
-        card.addEventListener('mouseenter', () => {
-            if (!prefersReducedMotion && phoneContainer) {
-                gsap.to(phoneContainer, {
-                    rotationY: 0,
-                    scale: 1.02,
-                    duration: 0.6,
-                    ease: 'power2.out'
-                });
-            }
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            if (!prefersReducedMotion && phoneContainer) {
-                gsap.to(phoneContainer, {
-                    rotationY: -5,
-                    scale: 1,
-                    duration: 0.6,
-                    ease: 'power2.out'
-                });
-            }
-        });
-    });
+    // Simple project card hover effects handled by CSS
 
     // Scroll to top functionality
     const scrollToTop = createScrollToTopButton();
@@ -778,295 +637,313 @@ window.addEventListener('error', (e) => {
 });
 
 // Project Showcase Interactive Functionality
-function initializeProjectShowcase() {
-    const projectNavItems = document.querySelectorAll('.project-nav-item');
-    const progressFill = document.querySelector('.progress-fill');
-    const progressIndicators = document.querySelectorAll('.indicator');
+
+// Project Modal Functionality - Disabled (buttons removed)
+function initializeProjectModals() {
+    // Modal functionality disabled since project buttons were removed
+    return;
     
-    // Project data
-    const projects = [
-        {
-            title: 'EcoCash Super App',
-            subtitle: 'Revolutionary mobile payment platform serving millions across Zimbabwe',
-            year: '2023',
-            description: 'Architected a comprehensive financial ecosystem combining payments, social features, and service marketplace in a single, seamless experience. Led the complete rebuild from legacy systems to modern React Native architecture.',
-            metrics: [
-                { number: '5M+', label: 'Active Users' },
-                { number: '40%', label: 'Faster Processing' },
-                { number: '99.9%', label: 'Uptime' }
-            ],
-            tech: ['React Native', 'TypeScript', 'Redux Toolkit', 'Firebase', 'Encryption'],
-            link: 'ecocash-details.html',
-            images: {
-                primary: './assets/ecocash-splash.PNG',
-                secondary1: './assets/ecocash-home.PNG',
-                secondary2: './assets/ecocash-transactions.PNG'
-            }
+    /* Original modal code preserved but disabled
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalGallery = document.getElementById('modalGallery');
+    const modalClose = document.getElementById('modalClose');
+    const projectButtons = document.querySelectorAll('[data-project]');
+
+    // Project data with images and descriptions
+    const projectData = {
+        ecocash: {
+            title: 'EcoCash',
+            description: 'Revolutionary fintech mobile application built with React Native and TypeScript, featuring secure digital payments, financial management tools, and seamless user experience for emerging markets.',
+            images: [
+                './assets/ecocash-home.PNG',
+                './assets/ecocash-transactions.PNG',
+                './assets/ecocash-qr.PNG',
+                './assets/ecocash-billers.PNG',
+                './assets/ecocash-login.PNG',
+                './assets/ecocash-pin.PNG',
+                './assets/ecocash-splash.PNG',
+                './assets/ecocash-overlay.PNG'
+            ]
         },
-        {
-            title: 'Kridas Sports Platform',
-            subtitle: 'Global sports networking platform connecting athletes and organizations',
-            year: '2023',
-            description: 'Built scalable infrastructure handling real-time interactions, media streaming, and complex relationship management. Revolutionized how sports professionals connect and collaborate worldwide.',
-            metrics: [
-                { number: '10K+', label: 'Athletes Connected' },
-                { number: '60%', label: 'Engagement Boost' },
-                { number: '24/7', label: 'Live Streaming' }
-            ],
-            tech: ['React Native', 'TypeScript', 'GraphQL', 'WebSockets', 'Docker'],
-            link: 'kridas-details.html',
-            images: {
-                primary: './assets/kridas-feed.png',
-                secondary1: './assets/kridas-login.png',
-                secondary2: './assets/kridas-events.png'
-            }
+        kridas: {
+            title: 'Kridas',
+            description: 'Global sports networking platform connecting athletes, coaches, and sports enthusiasts through advanced social features, performance tracking, and professional networking tools.',
+            images: [
+                './assets/kridas-feed.png',
+                './assets/kridas-profile.png',
+                './assets/kridas-events.png',
+                './assets/kridas-page.png',
+                './assets/kridas-products.png',
+                './assets/kridas-login.png'
+            ]
         },
-        {
-            title: 'Zaapi E-commerce Hub',
-            subtitle: 'Unified commerce platform integrating multiple social channels',
-            year: '2022',
-            description: 'Revolutionized how businesses manage customer communications and sales across platforms. Implemented robust queue system with retry logic and real-time sync monitoring.',
-            metrics: [
-                { number: '300%', label: 'Response Speed' },
-                { number: '50%', label: 'Fewer Missed Leads' },
-                { number: '15+', label: 'Platform Integrations' }
-            ],
-            tech: ['React Native', 'TypeScript', 'REST APIs', 'AWS', 'WebRTC'],
-            link: 'zaapi-details.html',
-            images: {
-                primary: './assets/zaapi-profile.jpeg',
-                secondary1: './assets/zaapi-splash.jpeg',
-                secondary2: './assets/zaapi-qr.jpeg'
-            }
+        zaapi: {
+            title: 'Zaapi',
+            description: 'Next-generation social commerce platform combining social media features with e-commerce capabilities, built with React Native and modern backend technologies.',
+            images: [
+                './assets/zaapi.jpeg',
+                './assets/zaapi-profile.jpeg',
+                './assets/zaapi-filters.jpeg',
+                './assets/zaapi-qr.jpeg',
+                './assets/zaapi-settings.jpeg',
+                './assets/zaapi-splash.jpeg'
+            ]
         },
-        {
+        nammakutira: {
             title: 'Namma Kutira',
-            subtitle: 'Comprehensive property management solution',
-            year: '2024',
-            description: 'Digital transformation of traditional rental processes with smart automation and intuitive interfaces. Streamlined landlord-tenant relationships through workflow automation.',
-            metrics: [
-                { number: '80%', label: 'Less Manual Work' },
-                { number: '90%', label: 'Faster Onboarding' },
-                { number: '95%', label: 'User Satisfaction' }
-            ],
-            tech: ['React Native', 'TypeScript', 'Node.js', 'MongoDB', 'Push Notifications'],
-            link: 'namma-kutira-details.html',
-            images: {
-                primary: './assets/ecocash-home.PNG',
-                secondary1: './assets/ecocash-login.PNG',
-                secondary2: './assets/ecocash-pin.PNG'
-            }
+            description: 'Comprehensive pet care management platform connecting pet owners with veterinary professionals, featuring health tracking, appointment scheduling, and emergency care services.',
+            images: [
+                './assets/nammakutira-Dash.png',
+                './assets/nammakutira-propdetails.png',
+                './assets/nammakutira-cart.png',
+                './assets/nammakutira-search.png',
+                './assets/nammakutira-login.png',
+                './assets/nammakutira-notifications.png',
+                './assets/nammakutira-OTP.png',
+                './assets/nammakutira-settings.png'
+            ]
         },
-        {
-            title: 'ISNEE Event Platform',
-            subtitle: 'Motorsport event management for competitive racing',
-            year: '2024',
-            description: 'Built for the high-stakes world of competitive racing. Event-driven architecture with instant updates and offline capabilities ensuring zero downtime during critical events.',
-            metrics: [
-                { number: '0', label: 'Event Downtime' },
-                { number: '100%', label: 'Registration Accuracy' },
-                { number: '<2s', label: 'Real-time Updates' }
-            ],
-            tech: ['React Native', 'TypeScript', 'NestJS', 'PostgreSQL', 'Real-time Sync'],
-            link: 'isnee-details.html',
-            images: {
-                primary: './assets/kridas-events.png',
-                secondary1: './assets/kridas-page.png',
-                secondary2: './assets/kridas-products.png'
-            }
+        isnee: {
+            title: 'ISNEE',
+            description: 'Advanced motorsport timing and analytics platform built with React Native, providing real-time race data, driver performance metrics, and comprehensive racing statistics.',
+            images: [
+                './assets/isnee-dash.png',
+                './assets/isnee-events.png',
+                './assets/isnee-leaderboard.png',
+                './assets/isnee-members.png',
+                './assets/isnee-profile.png',
+                './assets/isnee-reg-1.png',
+                './assets/isnee-reg-2.png',
+                './assets/isnee-login.png',
+                './assets/isnee-filters.png',
+                './assets/isnee-document.png'
+            ]
         }
-    ];
+    };
 
-    let currentProjectIndex = 0;
-    let isTransitioning = false;
-
-    // Update project content
-    function updateProjectContent(index, animate = true) {
-        if (isTransitioning || index === currentProjectIndex) return;
-        
-        isTransitioning = true;
-        const project = projects[index];
-        
-        // Update navigation active state
-        projectNavItems.forEach((item, i) => {
-            item.classList.toggle('active', i === index);
+    // Add click event listeners to project buttons
+    projectButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectKey = button.getAttribute('data-project');
+            const project = projectData[projectKey];
+            
+            if (project) {
+                openModal(project);
+            }
         });
+    });
+
+    // Close modal functionality
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    function openModal(project) {
+        // Set modal content
+        modalTitle.textContent = project.title;
+        modalDescription.textContent = project.description;
         
-        // Update progress indicators
-        progressIndicators.forEach((indicator, i) => {
-            indicator.classList.toggle('active', i === index);
-        });
-        
-        // Update progress bar
-        const progressWidth = ((index + 1) / projects.length) * 100;
-        gsap.to(progressFill, {
-            width: `${progressWidth}%`,
-            duration: 0.6,
-            ease: 'power2.out'
+        // Clear and populate gallery
+        modalGallery.innerHTML = '';
+        project.images.forEach(imageSrc => {
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            img.alt = `${project.title} Screenshot`;
+            img.loading = 'lazy';
+            modalGallery.appendChild(img);
         });
 
-        if (animate && !prefersReducedMotion) {
-            // Animate content change
-            const tl = gsap.timeline({
-                onComplete: () => {
-                    isTransitioning = false;
-                }
-            });
-
-            // Fade out current content
-            tl.to(['.project-title', '.project-subtitle', '.project-description'], {
+        // Show modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Animation
+        if (!prefersReducedMotion) {
+            gsap.fromTo(modalGallery.children, {
                 opacity: 0,
-                y: -20,
-                duration: 0.3,
-                stagger: 0.05
-            })
-            .to(['.project-metrics', '.project-tech-stack'], {
-                opacity: 0,
-                scale: 0.9,
-                duration: 0.3
-            }, '-=0.2')
-            .to('.phone-ecosystem', {
-                opacity: 0,
-                scale: 0.95,
-                duration: 0.4
-            }, '-=0.3')
-            .call(() => {
-                // Update content
-                updateProjectData(project);
-            })
-            .to(['.project-title', '.project-subtitle', '.project-description'], {
+                y: 20
+            }, {
                 opacity: 1,
                 y: 0,
-                duration: 0.4,
-                stagger: 0.05
-            })
-            .to(['.project-metrics', '.project-tech-stack'], {
-                opacity: 1,
-                scale: 1,
-                duration: 0.4
-            }, '-=0.3')
-            .to('.phone-ecosystem', {
-                opacity: 1,
-                scale: 1,
                 duration: 0.5,
-                ease: 'back.out(1.7)'
-            }, '-=0.2');
-        } else {
-            updateProjectData(project);
-            isTransitioning = false;
+                stagger: 0.1,
+                delay: 0.2,
+                ease: 'power2.out'
+            });
         }
-        
-        currentProjectIndex = index;
     }
 
-    // Update project data in DOM
-    function updateProjectData(project) {
-        document.getElementById('project-title').textContent = project.title;
-        document.getElementById('project-subtitle').textContent = project.subtitle;
-        document.getElementById('project-year').textContent = project.year;
-        document.getElementById('project-description').querySelector('p').textContent = project.description;
-        document.getElementById('project-link').href = project.link;
-        
-        // Update metrics
-        project.metrics.forEach((metric, i) => {
-            document.getElementById(`metric-${i + 1}`).textContent = metric.number;
-            document.getElementById(`metric-${i + 1}-label`).textContent = metric.label;
-        });
-        
-        // Update tech stack
-        const techStack = document.getElementById('project-tech');
-        techStack.innerHTML = '';
-        project.tech.forEach(tech => {
-            const techItem = document.createElement('div');
-            techItem.className = 'tech-item';
-            techItem.textContent = tech;
-            techStack.appendChild(techItem);
-        });
-        
-        // Update images
-        document.getElementById('primary-screen').src = project.images.primary;
-        document.getElementById('secondary-screen-1').src = project.images.secondary1;
-        document.getElementById('secondary-screen-2').src = project.images.secondary2;
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
     }
+    */
+}
 
-    // Add event listeners to navigation items
-    projectNavItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            updateProjectContent(index);
-        });
-    });
-
-    // Add event listeners to progress indicators
-    progressIndicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            updateProjectContent(index);
-        });
-    });
-
-    // Auto-advance projects (optional)
-    let autoAdvanceInterval;
+// Project Carousel Functionality
+function initializeCarousels() {
+    const carousels = document.querySelectorAll('.project-carousel');
     
-    function startAutoAdvance() {
-        autoAdvanceInterval = setInterval(() => {
-            const nextIndex = (currentProjectIndex + 1) % projects.length;
-            updateProjectContent(nextIndex);
-        }, 8000); // Change every 8 seconds
-    }
-    
-    function stopAutoAdvance() {
-        if (autoAdvanceInterval) {
-            clearInterval(autoAdvanceInterval);
-            autoAdvanceInterval = null;
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const indicators = carousel.querySelectorAll('.indicator');
+        
+        let currentSlide = 0;
+        let autoSlideInterval;
+        
+        // Initialize carousel
+        function initCarousel() {
+            showSlide(0);
+            startAutoSlide();
         }
-    }
-
-    // Start auto-advance when section comes into view
-    ScrollTrigger.create({
-        trigger: '.projects',
-        start: 'top 50%',
-        end: 'bottom 50%',
-        onEnter: () => {
-            if (!prefersReducedMotion) {
-                startAutoAdvance();
+        
+        // Show specific slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'prev');
+                if (i < index) {
+                    slide.classList.add('prev');
+                }
+            });
+            
+            // Show current slide
+            if (slides[index]) {
+                slides[index].classList.add('active');
+                currentSlide = index;
+                
+                // Update indicators
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === index);
+                });
             }
-        },
-        onLeave: stopAutoAdvance,
-        onEnterBack: () => {
-            if (!prefersReducedMotion) {
-                startAutoAdvance();
+        }
+        
+        // Next slide
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(prevIndex);
+        }
+        
+        // Auto slide functionality
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 4000); // 4 seconds
+        }
+        
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
             }
-        },
-        onLeaveBack: stopAutoAdvance
-    });
-
-    // Pause auto-advance on hover
-    const projectsSection = document.querySelector('.projects');
-    if (projectsSection) {
-        projectsSection.addEventListener('mouseenter', stopAutoAdvance);
-        projectsSection.addEventListener('mouseleave', () => {
-            if (!prefersReducedMotion) {
-                startAutoAdvance();
+        }
+        
+        // Event listeners
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
+            });
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            });
+        }
+        
+        // Indicator clicks
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', (e) => {
+                e.stopPropagation();
+                stopAutoSlide();
+                showSlide(index);
+                startAutoSlide();
+            });
+        });
+        
+        // Pause on hover
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+        
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoSlide();
+        });
+        
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoSlide();
+        });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide(); // Swipe left - next slide
+                } else {
+                    prevSlide(); // Swipe right - previous slide
+                }
+            }
+        }
+        
+        // Keyboard navigation
+        carousel.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                stopAutoSlide();
+                prevSlide();
+                startAutoSlide();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                stopAutoSlide();
+                nextSlide();
+                startAutoSlide();
             }
         });
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (!document.querySelector('.projects:hover')) return;
         
-        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-            e.preventDefault();
-            const prevIndex = currentProjectIndex > 0 ? currentProjectIndex - 1 : projects.length - 1;
-            updateProjectContent(prevIndex);
-        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-            e.preventDefault();
-            const nextIndex = (currentProjectIndex + 1) % projects.length;
-            updateProjectContent(nextIndex);
-        }
+        // Make carousel focusable for keyboard navigation
+        carousel.setAttribute('tabindex', '0');
+        
+        // Initialize the carousel
+        initCarousel();
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            stopAutoSlide();
+        });
     });
-
-    // Initialize first project
-    updateProjectContent(0, false);
 }
 
 // Debug mode for development

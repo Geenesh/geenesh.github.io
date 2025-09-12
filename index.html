@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Geenesh S - React Native Developer with 4+ years of experience crafting high-performance mobile applications with TypeScript, clean architecture, and modern development practices.">
-    <meta name="keywords" content="React Native Developer, TypeScript, Mobile App Development, Performance Optimization, Cross-platform Development">
+    <meta name="description" content="Geenesh S - Senior React & React Native Developer specializing in mobile app development, fintech solutions, and scalable cross-platform applications.">
+    <meta name="keywords" content="React Native Developer, Mobile App Development, React Developer, JavaScript, TypeScript, iOS, Android">
     <meta name="author" content="Geenesh S">
-    <meta property="og:title" content="Geenesh S - React Native Developer">
-    <meta property="og:description" content="Experienced React Native developer specializing in TypeScript, performance optimization, and scalable mobile solutions. 4+ years building production apps.">
-    <meta property="og:url" content="https://geenesh.github.io">
+    <meta property="og:title" content="Geenesh S - React & React Native Developer">
+    <meta property="og:description" content="Senior mobile developer crafting exceptional React Native applications with modern technologies and best practices.">
     <meta property="og:type" content="website">
-    <title>Geenesh S | React Native Developer</title>
+    <title>Geenesh S - React & React Native Developer</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     
@@ -23,19 +23,22 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
+    <nav class="navbar">
+        <div class="container">
             <div class="nav-brand">
-                <span>Geenesh</span>
+                <span class="brand-text">Geenesh</span>
+                <span class="brand-accent">.</span>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-toggle" id="nav-toggle">
+            <div class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="mailto:geenesh99@gmail.com" class="nav-cta">
+                    <i class="fas fa-envelope"></i>
+                    Let's Talk
+                </a>
+            </div>
+            <div class="nav-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -44,140 +47,200 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-element" data-speed="0.5"><i class="fab fa-react"></i></div>
+                <div class="floating-element" data-speed="0.3"><i class="fab fa-js-square"></i></div>
+                <div class="floating-element" data-speed="0.7"><i class="fab fa-node-js"></i></div>
+                <div class="floating-element" data-speed="0.4">{}</div>
+                <div class="floating-element" data-speed="0.6"><i class="fas fa-mobile-alt"></i></div>
+            </div>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                    </div>
                     <h1 class="hero-title">
-                        <span class="title-line">React Native</span>
-                        <span class="title-line">Developer</span>
+                        <span class="title-name">Geenesh S</span>
+                        <span class="title-role">React & React Native Developer</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Crafting lightning-fast mobile experiences with TypeScript precision and 
-                        architectural excellence. 4+ years of turning complex ideas into elegant, 
-                        performant applications that millions trust.
+                        I craft exceptional mobile experiences using React Native and modern JavaScript technologies. 
+                        Specialized in fintech, healthcare, and scalable cross-platform applications.
                     </p>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="code-window">
-                        <div class="window-header">
-                            <div class="window-controls">
-                                <span class="control close"></span>
-                                <span class="control minimize"></span>
-                                <span class="control maximize"></span>
-                            </div>
-                            <div class="window-title">App.tsx</div>
-                        </div>
-                        <div class="code-content">
-                            <pre><code><span class="keyword">import</span> <span class="type">React</span> <span class="keyword">from</span> <span class="string">'react'</span><span class="punctuation">;</span>
-<span class="keyword">import</span> <span class="punctuation">{</span> <span class="type">Navigation</span> <span class="punctuation">}</span> <span class="keyword">from</span> <span class="string">'./navigation'</span><span class="punctuation">;</span>
-
-<span class="keyword">const</span> <span class="function">App</span><span class="punctuation">:</span> <span class="type">React.FC</span> <span class="operator">=</span> <span class="punctuation">()</span> <span class="operator">=></span> <span class="punctuation">{</span>
-  <span class="keyword">return</span> <span class="punctuation">(</span>
-    <span class="tag">&lt;</span><span class="tag-name">Navigation</span> <span class="tag">/&gt;</span>
-  <span class="punctuation">);</span>
-<span class="punctuation">};</span>
-
-<span class="keyword">export</span> <span class="keyword">default</span> <span class="function">App</span><span class="punctuation">;</span></code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-bg-elements">
-            <div class="bg-element bg-element-1"></div>
-            <div class="bg-element bg-element-2"></div>
-            <div class="bg-element bg-element-3"></div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Building tomorrow's mobile experiences today</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="lead">
-                            With over 4 years immersed in React Native development, I've evolved from 
-                            curious developer to mobile architecture specialist. My journey spans from 
-                            early prototype stages to scaling applications used by millions.
-                        </p>
-                        <p>
-                            TypeScript isn't just a preference—it's my foundation for building reliable, 
-                            maintainable codebases. I architect solutions that prioritize performance, 
-                            embrace reusable component patterns, and follow industry best practices that 
-                            teams can build upon for years.
-                        </p>
-                        <p>
-                            Every line of code I write serves a purpose: creating mobile experiences 
-                            that feel native, perform flawlessly, and solve real problems for real people.
-                        </p>
-                    </div>
-                    <div class="about-stats">
+                    <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">4+</span>
+                            <span class="stat-number">5+</span>
                             <span class="stat-label">Years Experience</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Apps Shipped</span>
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Projects Delivered</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number">1M+</span>
-                            <span class="stat-label">Users Reached</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <span class="terminal-title">~/geenesh-portfolio</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="code-line">
+                                <span class="prompt">$</span>
+                                <span class="command">npx react-native init AwesomeApp</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="comment">// Creating exceptional mobile experiences</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="keyword">const</span> <span class="variable">developer</span> = {
+                            </div>
+                            <div class="code-line indent">
+                                <span class="property">name:</span> <span class="string">'Geenesh S'</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="property">skills:</span> [<span class="string">'React Native'</span>, <span class="string">'TypeScript'</span>],
+                            </div>
+                            <div class="code-line indent">
+                                <span class="property">passion:</span> <span class="string">'Mobile Innovation'</span>
+                            </div>
+                            <div class="code-line">
+                                };
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-skills">
-                    <h3>Core Expertise</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Expertise Section -->
+    <section class="about-expertise" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me & Expertise</h2>
+                <p class="section-subtitle">Building the future of mobile applications</p>
+            </div>
+            <div class="about-expertise-grid">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Passionate Mobile Developer</h3>
+                        <p>
+                            With over 5 years of experience in React Native development, I specialize in creating 
+                            high-performance, scalable mobile applications. My journey spans from fintech solutions 
+                            handling millions of transactions to healthcare platforms improving lives globally.
+                        </p>
+                        <p>
+                            I believe in writing clean, maintainable code and following industry best practices. 
+                            My approach combines technical excellence with user-centered design to deliver 
+                            applications that not only perform well but also provide exceptional user experiences.
+                        </p>
+                    </div>
+                    <div class="experience-highlights">
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Performance Optimization</h4>
+                                <p>Expert in optimizing React Native apps for speed and efficiency</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Security First</h4>
+                                <p>Implementing robust security measures for sensitive applications</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Team Collaboration</h4>
+                                <p>Strong experience working in agile teams and mentoring developers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expertise-content">
+                    <h3>Technical Expertise</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-mobile-alt"></i> Mobile Development</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">React Native</span>
+                                <span class="skill-item">Expo</span>
+                                <span class="skill-item">iOS Development</span>
+                                <span class="skill-item">Android Development</span>
                             </div>
-                            <h4>Performance First</h4>
-                            <p>Bundle optimization, lazy loading, and memory management for lightning-fast apps</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                        <div class="skill-category">
+                            <h4><i class="fab fa-js-square"></i> Frontend Technologies</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">TypeScript</span>
+                                <span class="skill-item">JavaScript ES6+</span>
+                                <span class="skill-item">React.js</span>
+                                <span class="skill-item">Next.js</span>
                             </div>
-                            <h4>Clean Architecture</h4>
-                            <p>Scalable patterns, separation of concerns, and maintainable code structures</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                                    <circle cx="12" cy="16" r="1" fill="currentColor"/>
-                                    <path d="M7 11V7A5 5 0 0 1 17 7V11" stroke="currentColor" stroke-width="2"/>
-                                </svg>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-server"></i> Backend & APIs</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">Node.js</span>
+                                <span class="skill-item">Express.js</span>
+                                <span class="skill-item">REST APIs</span>
+                                <span class="skill-item">GraphQL</span>
                             </div>
-                            <h4>Type Safety</h4>
-                            <p>Strict TypeScript implementation preventing runtime errors and improving DX</p>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                                    <rect x="7" y="7" width="3" height="9" stroke="currentColor" stroke-width="2"/>
-                                    <rect x="14" y="7" width="3" height="5" stroke="currentColor" stroke-width="2"/>
-                                </svg>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-database"></i> Databases & Tools</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">MongoDB</span>
+                                <span class="skill-item">PostgreSQL</span>
+                                <span class="skill-item">Redux</span>
+                                <span class="skill-item">Git</span>
                             </div>
-                            <h4>Component Design</h4>
-                            <p>Reusable, testable components with consistent design system integration</p>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">AWS</span>
+                                <span class="skill-item">Firebase</span>
+                                <span class="skill-item">Docker</span>
+                                <span class="skill-item">CI/CD</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-tools"></i> Development Tools</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">VS Code</span>
+                                <span class="skill-item">Xcode</span>
+                                <span class="skill-item">Android Studio</span>
+                                <span class="skill-item">Figma</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -190,359 +253,230 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Mobile applications that millions trust and love</p>
+                <p class="section-subtitle">Showcasing innovation through code</p>
             </div>
-            
-            <!-- Project Navigation Pills -->
-            <div class="project-nav">
-                <button class="project-nav-item active" data-project="0">
-                    <div class="nav-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span class="nav-label">EcoCash</span>
-                    <span class="nav-category">Fintech</span>
-                </button>
-                <button class="project-nav-item" data-project="1">
-                    <div class="nav-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="12" cy="12" r="2" fill="currentColor"/>
-                        </svg>
-                    </div>
-                    <span class="nav-label">Kridas</span>
-                    <span class="nav-category">Sports Tech</span>
-                </button>
-                <button class="project-nav-item" data-project="2">
-                    <div class="nav-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="8" cy="21" r="1" fill="currentColor"/>
-                            <circle cx="19" cy="21" r="1" fill="currentColor"/>
-                            <path d="M2.05 2.05H4L6.2 12.65A2 2 0 0 0 8.16 14H18.5A2 2 0 0 0 1.96-1.61L5.21 4H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span class="nav-label">Zaapi</span>
-                    <span class="nav-category">E-commerce</span>
-                </button>
-                <button class="project-nav-item" data-project="3">
-                    <div class="nav-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 9L12 2L21 9V20A2 2 0 0 1 19 22H5A2 2 0 0 1 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <span class="nav-label">Namma Kutira</span>
-                    <span class="nav-category">PropTech</span>
-                </button>
-                <button class="project-nav-item" data-project="4">
-                    <div class="nav-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <span class="nav-label">ISNEE</span>
-                    <span class="nav-category">Events</span>
-                </button>
-            </div>
-
-            <!-- Project Display Area -->
-            <div class="project-showcase">
-                <!-- Project Content -->
-                <div class="project-main">
-                    <div class="project-info-panel">
-                        <div class="project-header">
-                            <div class="project-meta">
-                                <span class="project-status">Production</span>
-                                <span class="project-year" id="project-year">2023</span>
+            <div class="projects-grid">
+                <!-- EcoCash Project -->
+                <div class="project-card">
+                    <div class="project-carousel" data-project="ecocash">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="./assets/ecocash-home.PNG" alt="EcoCash Home Screen" loading="lazy">
                             </div>
-                            <h3 class="project-title" id="project-title">EcoCash Super App</h3>
-                            <p class="project-subtitle" id="project-subtitle">
-                                Revolutionary mobile payment platform serving millions across Zimbabwe
-                            </p>
-                        </div>
-                        
-                        <div class="project-description" id="project-description">
-                            <p>Architected a comprehensive financial ecosystem combining payments, social features, 
-                            and service marketplace in a single, seamless experience. Led the complete rebuild 
-                            from legacy systems to modern React Native architecture.</p>
-                        </div>
-
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-number" id="metric-1">5M+</span>
-                                <span class="metric-label" id="metric-1-label">Active Users</span>
+                            <div class="carousel-slide">
+                                <img src="./assets/ecocash-transactions.PNG" alt="EcoCash Transactions" loading="lazy">
                             </div>
-                            <div class="metric">
-                                <span class="metric-number" id="metric-2">40%</span>
-                                <span class="metric-label" id="metric-2-label">Faster Processing</span>
+                            <div class="carousel-slide">
+                                <img src="./assets/ecocash-qr.PNG" alt="EcoCash QR Payment" loading="lazy">
                             </div>
-                            <div class="metric">
-                                <span class="metric-number" id="metric-3">99.9%</span>
-                                <span class="metric-label" id="metric-3-label">Uptime</span>
+                            <div class="carousel-slide">
+                                <img src="./assets/ecocash-billers.PNG" alt="EcoCash Bill Payments" loading="lazy">
                             </div>
                         </div>
-
-                        <div class="project-tech-stack" id="project-tech">
-                            <div class="tech-item">React Native</div>
-                            <div class="tech-item">TypeScript</div>
-                            <div class="tech-item">Redux Toolkit</div>
-                            <div class="tech-item">Firebase</div>
-                            <div class="tech-item">Encryption</div>
-                        </div>
-
-                        <div class="project-actions">
-                            <a href="ecocash-details.html" class="btn btn-primary" id="project-link">
-                                <span>View Case Study</span>
-                                <span class="btn-arrow">→</span>
-                            </a>
-                            <button class="btn btn-secondary" id="project-preview">
-                                <span>Live Preview</span>
-                                <span class="btn-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z" stroke="currentColor" stroke-width="2"/>
-                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
-                                    </svg>
-                                </span>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-btn next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
                             </button>
                         </div>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                        </div>
                     </div>
-
-                    <!-- Phone Display Area -->
-                    <div class="project-visual-panel">
-                        <div class="phone-ecosystem">
-                            <!-- Primary Phone -->
-                            <div class="phone-container primary">
-                                <div class="phone-mockup">
-                                    <div class="phone-screen">
-                                        <img src="./assets/ecocash-splash.PNG" alt="Primary App Screen" id="primary-screen" loading="lazy">
-                                    </div>
-                                </div>
-                                <div class="phone-reflection"></div>
-                            </div>
-                            
-                            <!-- Secondary Phones (Floating) -->
-                            <div class="phone-container secondary left">
-                                <div class="phone-mockup">
-                                    <div class="phone-screen">
-                                        <img src="./assets/ecocash-home.PNG" alt="Secondary Screen" id="secondary-screen-1" loading="lazy">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="phone-container secondary right">
-                                <div class="phone-mockup">
-                                    <div class="phone-screen">
-                                        <img src="./assets/ecocash-transactions.PNG" alt="Secondary Screen" id="secondary-screen-2" loading="lazy">
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Background Elements -->
-                            <div class="visual-bg-elements">
-                                <div class="bg-circle bg-circle-1"></div>
-                                <div class="bg-circle bg-circle-2"></div>
-                                <div class="bg-grid"></div>
-                            </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">EcoCash</h3>
+                            <span class="project-type">Fintech</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Redux</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Progress Indicator -->
-                <div class="project-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
+                <!-- Kridas Project -->
+                <div class="project-card">
+                    <div class="project-carousel" data-project="kridas">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="./assets/kridas-feed.png" alt="Kridas Social Feed" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/kridas-profile.png" alt="Kridas Profile" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/kridas-events.png" alt="Kridas Sports Events" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/kridas-page.png" alt="Kridas Sports Page" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-btn next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                        </div>
                     </div>
-                    <div class="progress-indicators">
-                        <span class="indicator active"></span>
-                        <span class="indicator"></span>
-                        <span class="indicator"></span>
-                        <span class="indicator"></span>
-                        <span class="indicator"></span>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">Kridas</h3>
+                            <span class="project-type">Sports</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack" id="tech-stack">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technology Arsenal</h2>
-                <p class="section-subtitle">Tools and technologies I leverage to build exceptional mobile experiences</p>
-            </div>
-            <div class="tech-categories">
-                <div class="tech-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-                                <line x1="12" y1="18" x2="12.01" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                <!-- Zaapi Project -->
+                <div class="project-card">
+                    <div class="project-carousel" data-project="zaapi">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="./assets/zaapi.jpeg" alt="Zaapi Main Interface" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/zaapi-profile.jpeg" alt="Zaapi User Profile" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/zaapi-filters.jpeg" alt="Zaapi Product Filters" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/zaapi-qr.jpeg" alt="Zaapi QR Scanner" loading="lazy">
+                            </div>
                         </div>
-                        <h3>Mobile Development</h3>
-                    </div>
-                    <div class="tech-items">
-                        <div class="tech-item primary">
-                            <img src="./assets/react.png" alt="React Native" loading="lazy">
-                            <span>React Native</span>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-btn next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
                         </div>
-                        <div class="tech-item primary">
-                            <img src="./assets/typescriptIcon.png" alt="TypeScript" loading="lazy">
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Redux Toolkit</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Zustand</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>React Query</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Reanimated</span>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="tech-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
-                                <path d="M19.4 15A1.65 1.65 0 0 0 20.99 13.35A1.65 1.65 0 0 0 19.4 9A1.65 1.65 0 0 0 17.9 10.65L16.25 12 19.4 15Z" stroke="currentColor" stroke-width="2"/>
-                                <path d="M4.6 9A1.65 1.65 0 0 0 3.01 10.65A1.65 1.65 0 0 0 4.6 15A1.65 1.65 0 0 0 6.1 13.35L7.75 12 4.6 9Z" stroke="currentColor" stroke-width="2"/>
-                            </svg>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">Zaapi</h3>
+                            <span class="project-type">Commerce</span>
                         </div>
-                        <h3>Backend & APIs</h3>
-                    </div>
-                    <div class="tech-items">
-                        <div class="tech-item primary">
-                            <img src="./assets/nodejs.png" alt="Node.js" loading="lazy">
-                            <span>Node.js</span>
-                        </div>
-                        <div class="tech-item primary">
-                            <img src="./assets/nestjs.png" alt="NestJS" loading="lazy">
-                            <span>NestJS</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>GraphQL</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>REST APIs</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>WebSockets</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Firebase</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">WebRTC</span>
+                            <span class="tech-tag">AWS</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="tech-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="2"/>
-                                <path d="M21 12C21 13.66 16.97 15 12 15S3 13.66 3 12" stroke="currentColor" stroke-width="2"/>
-                                <path d="M3 5V19C3 20.66 7.03 22 12 22S21 20.66 21 19V5" stroke="currentColor" stroke-width="2"/>
-                            </svg>
+
+                <!-- Namma Kutira Project -->
+                <div class="project-card">
+                    <div class="project-carousel" data-project="nammakutira">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="./assets/nammakutira-Dash.png" alt="Namma Kutira Dashboard" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/nammakutira-propdetails.png" alt="Namma Kutira Property Details" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/nammakutira-cart.png" alt="Namma Kutira Shopping Cart" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/nammakutira-search.png" alt="Namma Kutira Search" loading="lazy">
+                            </div>
                         </div>
-                        <h3>Database & Storage</h3>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-btn next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                        </div>
                     </div>
-                    <div class="tech-items">
-                        <div class="tech-item">
-                            <span>PostgreSQL</span>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">Namma Kutira</h3>
+                            <span class="project-type">Healthcare</span>
                         </div>
-                        <div class="tech-item">
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Redis</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>SQLite</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>AsyncStorage</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Realm</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 10H20A2 2 0 0 1 22 12V17A2 2 0 0 1 20 19H4A2 2 0 0 1 2 17V12A2 2 0 0 1 4 10H6" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3>DevOps & Cloud</h3>
-                    </div>
-                    <div class="tech-items">
-                        <div class="tech-item primary">
-                            <img src="./assets/docker.png" alt="Docker" loading="lazy">
-                            <span>Docker</span>
-                        </div>
-                        <div class="tech-item primary">
-                            <img src="./assets/aws.png" alt="AWS" loading="lazy">
-                            <span>AWS</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>CI/CD</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>App Center</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Fastlane</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Jest</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="tech-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.7 6.3A1 1 0 0 0 13.9 6A1 1 0 0 0 13 6.7L9 10.7A1 1 0 0 0 9 12.3L13 16.3A1 1 0 0 0 13.9 17A1 1 0 0 0 14.7 16.3L11.4 13L14.7 9.7A1 1 0 0 0 14.7 6.3Z" fill="currentColor"/>
-                                <path d="M20.7 6.3A1 1 0 0 0 19.9 6A1 1 0 0 0 19 6.7L15 10.7A1 1 0 0 0 15 12.3L19 16.3A1 1 0 0 0 19.9 17A1 1 0 0 0 20.7 16.3L17.4 13L20.7 9.7A1 1 0 0 0 20.7 6.3Z" fill="currentColor"/>
-                            </svg>
+
+                <!-- ISNEE Project -->
+                <div class="project-card">
+                    <div class="project-carousel" data-project="isnee">
+                        <div class="carousel-container">
+                            <div class="carousel-slide active">
+                                <img src="./assets/isnee-dash.png" alt="ISNEE Dashboard" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/isnee-events.png" alt="ISNEE Events" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/isnee-leaderboard.png" alt="ISNEE Leaderboard" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="./assets/isnee-members.png" alt="ISNEE Team Members" loading="lazy">
+                            </div>
                         </div>
-                        <h3>Development Tools</h3>
+                        <div class="carousel-controls">
+                            <button class="carousel-btn prev" aria-label="Previous image">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-btn next" aria-label="Next image">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                        </div>
                     </div>
-                    <div class="tech-items">
-                        <div class="tech-item">
-                            <span>Nx Monorepo</span>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3 class="project-title">ISNEE</h3>
+                            <span class="project-type">Motorsport</span>
                         </div>
-                        <div class="tech-item">
-                            <span>ESLint</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Prettier</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Flipper</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Reactotron</span>
-                        </div>
-                        <div class="tech-item">
-                            <span>Git</span>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Real-time</span>
+                            <span class="tech-tag">Analytics</span>
                         </div>
                     </div>
                 </div>
@@ -550,72 +484,76 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Get In Touch Section -->
     <section class="contact" id="contact">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <p class="section-subtitle">Ready to bring your mobile app idea to life?</p>
+            </div>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h2 class="contact-title">Let's Build Something Amazing</h2>
-                    <p class="contact-description">
-                        Ready to transform your mobile app idea into reality? I'm here to help 
-                        you create applications that users love and businesses depend on.
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I'm always excited to discuss new opportunities and challenging projects. 
+                        Whether you need a complete mobile app solution or technical consultation, 
+                        let's connect and explore how we can work together.
                     </p>
                     <div class="contact-methods">
-                        <div class="contact-method">
+                        <a href="mailto:geenesh99@gmail.com" class="contact-method">
                             <div class="method-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <i class="fas fa-envelope"></i>
                             </div>
                             <div class="method-content">
                                 <h4>Email</h4>
-                                <a href="mailto:geenesh99@gmail.com">geenesh99@gmail.com</a>
+                                <span>geenesh99@gmail.com</span>
                             </div>
-                        </div>
-                        <div class="contact-method">
+                        </a>
+                        <a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener" class="contact-method">
                             <div class="method-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 8A6 6 0 0 1 6 18V6A6 6 0 0 1 16 8Z" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M2 9H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M2 15H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M2 21H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
+                                <i class="fab fa-linkedin"></i>
                             </div>
                             <div class="method-content">
                                 <h4>LinkedIn</h4>
-                                <a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener">Connect with me</a>
+                                <span>Connect with me</span>
                             </div>
-                        </div>
-                        <div class="contact-method">
+                        </a>
+                        <a href="https://github.com/Geenesh" target="_blank" rel="noopener" class="contact-method">
                             <div class="method-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
+                                <i class="fab fa-github"></i>
                             </div>
                             <div class="method-content">
-                                <h4>Response Time</h4>
-                                <span>Usually within 24 hours</span>
+                                <h4>GitHub</h4>
+                                <span>View my code</span>
                             </div>
+                        </a>
+                    </div>
+                    <div class="availability">
+                        <div class="availability-status">
+                            <div class="status-indicator"></div>
+                            <span>Available for new projects</span>
                         </div>
+                        <p>Usually responds within 24 hours</p>
                     </div>
                 </div>
                 <div class="contact-form-container">
                     <form action="https://formspree.io/f/xjvnqdeg" method="POST" class="contact-form" id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="project-type">Project Type</label>
                             <select id="project-type" name="project-type" required>
                                 <option value="">Select project type</option>
                                 <option value="mobile-app">Mobile App Development</option>
+                                <option value="web-app">Web Application</option>
                                 <option value="consultation">Technical Consultation</option>
                                 <option value="code-review">Code Review & Architecture</option>
                                 <option value="optimization">Performance Optimization</option>
@@ -628,7 +566,10 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">
                             <span class="btn-text">Send Message</span>
-                            <span class="btn-loading">Sending...</span>
+                            <span class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Sending...
+                            </span>
                         </button>
                     </form>
                 </div>
@@ -641,33 +582,42 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span>Geenesh S</span>
-                    <p>React Native Developer</p>
+                    <div class="brand-logo">
+                        <span class="brand-text">Geenesh</span>
+                        <span class="brand-accent">.</span>
+                    </div>
+                    <p>React & React Native Developer</p>
+                    <p>Crafting exceptional mobile experiences with modern technologies</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-section">
                         <h4>Connect</h4>
                         <ul>
-                            <li><a href="mailto:geenesh99@gmail.com">Email</a></li>
-                            <li><a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener">LinkedIn</a></li>
-                            <li><a href="https://github.com/Geenesh" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="mailto:geenesh99@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                            <li><a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="https://github.com/Geenesh" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
                         </ul>
                     </div>
                     <div class="footer-section">
-                        <h4>Work</h4>
+                        <h4>Expertise</h4>
                         <ul>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#tech-stack">Skills</a></li>
-                            <li><a href="#about">Experience</a></li>
+                            <li><a href="#about">React Native</a></li>
+                            <li><a href="#about">Mobile Development</a></li>
+                            <li><a href="#about">TypeScript</a></li>
+                            <li><a href="#about">Full Stack</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Geenesh S. Crafted with passion for mobile excellence.</p>
+                <p>&copy; 2024 Geenesh S. Built with passion for mobile innovation.</p>
+                <div class="footer-tech">
+                    <span>Built with React Native expertise</span>
+                </div>
             </div>
         </div>
     </footer>
+
 
     <script src="scripts.js"></script>
 </body>
