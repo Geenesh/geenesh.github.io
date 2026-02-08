@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+
+# Backup files
+assets/backup/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Dependencies (if added later)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build outputs (if added later)
+dist/
+build/

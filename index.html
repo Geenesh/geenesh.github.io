@@ -9,238 +9,174 @@
     <meta property="og:title" content="Geenesh S - React & React Native Developer">
     <meta property="og:description" content="Senior mobile developer crafting exceptional React Native applications with modern technologies and best practices.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geenesh.github.io">
+    <meta property="og:image" content="https://geenesh.github.io/assets/og-image.webp">
+    <meta property="og:site_name" content="Geenesh S Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Geenesh S - React & React Native Developer">
+    <meta name="twitter:description" content="Senior mobile developer crafting exceptional React Native applications with modern technologies and best practices.">
+    <meta name="twitter:image" content="https://geenesh.github.io/assets/og-image.webp">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="canonical" href="https://geenesh.github.io">
     <title>Geenesh S - React & React Native Developer</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.ico">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 </head>
 <body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="gradient-orb gradient-orb-3"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-brand">
-                <span class="brand-text">Geenesh</span>
-                <span class="brand-accent">.</span>
-            </div>
-            <div class="nav-menu">
+            <a href="#" class="nav-brand">
+                <span class="brand-symbol">G</span>
+                <span class="brand-name">eenesh</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <a href="mailto:geenesh99@gmail.com" class="nav-cta">
-                    <i class="fas fa-envelope"></i>
-                    Let's Talk
-                </a>
             </div>
-            <div class="nav-toggle">
+            <a href="mailto:geenesh99@gmail.com" class="nav-cta">
+                <span class="cta-text">Let's Talk</span>
+                <span class="cta-arrow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
-                <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-background">
-            <div class="grid-overlay"></div>
-            <div class="floating-elements">
-                <div class="floating-element" data-speed="0.5"><i class="fab fa-react"></i></div>
-                <div class="floating-element" data-speed="0.3"><i class="fab fa-js-square"></i></div>
-                <div class="floating-element" data-speed="0.7"><i class="fab fa-node-js"></i></div>
-                <div class="floating-element" data-speed="0.4">{}</div>
-                <div class="floating-element" data-speed="0.6"><i class="fas fa-mobile-alt"></i></div>
-            </div>
-        </div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-greeting">
-                        <span class="greeting-text">Hello, I'm</span>
+                <h1 class="hero-title">
+                    <span class="title-line">Mobile Developer</span>
+                    <span class="title-line title-accent">& Digital Craftsman</span>
+                </h1>
+                <p class="hero-description">
+                    I build exceptional mobile experiences with React Native.
+                    Specialized in fintech, healthcare, and apps that scale to millions.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">5+</span>
+                        <span class="stat-label">Years</span>
                     </div>
-                    <h1 class="hero-title">
-                        <span class="title-name">Geenesh S</span>
-                        <span class="title-role">React & React Native Developer</span>
-                    </h1>
-                    <p class="hero-subtitle">
-                        I craft exceptional mobile experiences using React Native and modern JavaScript technologies. 
-                        Specialized in fintech, healthcare, and scalable cross-platform applications.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">6+</span>
-                            <span class="stat-label">Projects Delivered</span>
-                        </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">6+</span>
+                        <span class="stat-label">Projects</span>
                     </div>
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            <span>View My Work</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <span>Get In Touch</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </a>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">1M+</span>
+                        <span class="stat-label">Users</span>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="code-terminal">
-                        <div class="terminal-header">
-                            <div class="terminal-controls">
-                                <span class="control red"></span>
-                                <span class="control yellow"></span>
-                                <span class="control green"></span>
-                            </div>
-                            <span class="terminal-title">~/geenesh-portfolio</span>
+                <div class="hero-actions">
+                    <a href="#work" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
                         </div>
-                        <div class="terminal-body">
-                            <div class="code-line">
-                                <span class="prompt">$</span>
-                                <span class="command">npx react-native init AwesomeApp</span>
-                            </div>
-                            <div class="code-line">
-                                <span class="comment">// Creating exceptional mobile experiences</span>
-                            </div>
-                            <div class="code-line">
-                                <span class="keyword">const</span> <span class="variable">developer</span> = {
-                            </div>
-                            <div class="code-line indent">
-                                <span class="property">name:</span> <span class="string">'Geenesh S'</span>,
-                            </div>
-                            <div class="code-line indent">
-                                <span class="property">skills:</span> [<span class="string">'React Native'</span>, <span class="string">'TypeScript'</span>],
-                            </div>
-                            <div class="code-line indent">
-                                <span class="property">passion:</span> <span class="string">'Mobile Innovation'</span>
-                            </div>
-                            <div class="code-line">
-                                };
-                            </div>
-                        </div>
+                        <span class="window-title">developer.js</span>
+                    </div>
+                    <div class="window-body">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Geenesh S"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"React Native Developer"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">"React Native"</span>,
+    <span class="code-string">"TypeScript"</span>,
+    <span class="code-string">"Node.js"</span>
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building apps that matter"</span>
+};</code></pre>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About & Expertise Section -->
-    <section class="about-expertise" id="about">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me & Expertise</h2>
-                <p class="section-subtitle">Building the future of mobile applications</p>
-            </div>
-            <div class="about-expertise-grid">
+            <div class="section-label">About</div>
+            <div class="about-grid">
                 <div class="about-content">
-                    <div class="about-text">
-                        <h3>Passionate Mobile Developer</h3>
-                        <p>
-                            With over 5 years of experience in React Native development, I specialize in creating 
-                            high-performance, scalable mobile applications. My journey spans from fintech solutions 
-                            handling millions of transactions to healthcare platforms improving lives globally.
-                        </p>
-                        <p>
-                            I believe in writing clean, maintainable code and following industry best practices. 
-                            My approach combines technical excellence with user-centered design to deliver 
-                            applications that not only perform well but also provide exceptional user experiences.
-                        </p>
-                    </div>
-                    <div class="experience-highlights">
-                        <div class="highlight">
-                            <div class="highlight-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <h4>Performance Optimization</h4>
-                                <p>Expert in optimizing React Native apps for speed and efficiency</p>
-                            </div>
-                        </div>
-                        <div class="highlight">
-                            <div class="highlight-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <h4>Security First</h4>
-                                <p>Implementing robust security measures for sensitive applications</p>
-                            </div>
-                        </div>
-                        <div class="highlight">
-                            <div class="highlight-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <h4>Team Collaboration</h4>
-                                <p>Strong experience working in agile teams and mentoring developers</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="about-title">
+                        Crafting digital experiences that
+                        <span class="text-gradient">push boundaries</span>
+                    </h2>
+                    <p class="about-text">
+                        With over 5 years of hands-on experience in React Native development,
+                        I've built everything from fintech apps processing millions of transactions
+                        to healthcare platforms improving lives. I believe great mobile apps are
+                        invisible - they just work, beautifully.
+                    </p>
+                    <p class="about-text">
+                        My approach combines technical precision with user-centered thinking.
+                        Every line of code serves a purpose, every interaction feels intentional.
+                    </p>
                 </div>
-                <div class="expertise-content">
-                    <h3>Technical Expertise</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4><i class="fas fa-mobile-alt"></i> Mobile Development</h4>
-                            <div class="skill-items">
-                                <span class="skill-item">React Native</span>
-                                <span class="skill-item">Expo</span>
-                                <span class="skill-item">iOS Development</span>
-                                <span class="skill-item">Android Development</span>
-                            </div>
+                <div class="about-skills">
+                    <div class="skill-group">
+                        <h3 class="skill-title">Core Stack</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Expo</span>
                         </div>
-                        <div class="skill-category">
-                            <h4><i class="fab fa-js-square"></i> Frontend Technologies</h4>
-                            <div class="skill-items">
-                                <span class="skill-item">TypeScript</span>
-                                <span class="skill-item">JavaScript ES6+</span>
-                                <span class="skill-item">React.js</span>
-                                <span class="skill-item">Next.js</span>
-                            </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-title">Backend & APIs</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">GraphQL</span>
+                            <span class="skill-tag">REST</span>
+                            <span class="skill-tag">Firebase</span>
                         </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-server"></i> Backend & APIs</h4>
-                            <div class="skill-items">
-                                <span class="skill-item">Node.js</span>
-                                <span class="skill-item">Express.js</span>
-                                <span class="skill-item">REST APIs</span>
-                                <span class="skill-item">GraphQL</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-database"></i> Databases & Tools</h4>
-                            <div class="skill-items">
-                                <span class="skill-item">MongoDB</span>
-                                <span class="skill-item">PostgreSQL</span>
-                                <span class="skill-item">Redux</span>
-                                <span class="skill-item">Git</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
-                            <div class="skill-items">
-                                <span class="skill-item">AWS</span>
-                                <span class="skill-item">Firebase</span>
-                                <span class="skill-item">Docker</span>
-                                <span class="skill-item">CI/CD</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h4><i class="fas fa-tools"></i> Development Tools</h4>
-                            <div class="skill-items">
-                                <span class="skill-item">VS Code</span>
-                                <span class="skill-item">Xcode</span>
-                                <span class="skill-item">Android Studio</span>
-                                <span class="skill-item">Figma</span>
-                            </div>
+                    </div>
+                    <div class="skill-group">
+                        <h3 class="skill-title">Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">CI/CD</span>
                         </div>
                     </div>
                 </div>
@@ -248,326 +184,384 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <!-- App Showcase Section -->
+    <section class="showcase" id="work">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Showcasing innovation through code</p>
+                <div class="section-label">App Showcase</div>
+                <h2 class="section-title">Apps I've Built</h2>
+                <p class="section-subtitle">Swipe through my mobile apps — each one crafted with React Native</p>
             </div>
-            <div class="projects-grid">
-                <!-- EcoCash Project -->
-                <div class="project-card">
-                    <div class="project-carousel" data-project="ecocash">
-                        <div class="carousel-container">
-                            <div class="carousel-slide active">
-                                <img src="./assets/ecocash-home.PNG" alt="EcoCash Home Screen" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/ecocash-transactions.PNG" alt="EcoCash Transactions" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/ecocash-qr.PNG" alt="EcoCash QR Payment" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/ecocash-billers.PNG" alt="EcoCash Bill Payments" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev" aria-label="Previous image">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-btn next" aria-label="Next image">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                        </div>
-                        <div class="carousel-indicators">
-                            <span class="indicator active" data-slide="0"></span>
-                            <span class="indicator" data-slide="1"></span>
-                            <span class="indicator" data-slide="2"></span>
-                            <span class="indicator" data-slide="3"></span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3 class="project-title">EcoCash</h3>
-                            <span class="project-type">Fintech</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Redux</span>
-                        </div>
-                    </div>
-                </div>
+        </div>
 
-                <!-- Kridas Project -->
-                <div class="project-card">
-                    <div class="project-carousel" data-project="kridas">
-                        <div class="carousel-container">
-                            <div class="carousel-slide active">
-                                <img src="./assets/kridas-feed.png" alt="Kridas Social Feed" loading="lazy">
+        <!-- Horizontal Device Gallery -->
+        <div class="device-gallery">
+            <div class="gallery-track">
+                <!-- EcoCash -->
+                <article class="app-showcase-item">
+                    <div class="device-frame">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <div class="screen-carousel" data-autoplay="true">
+                                <img src="./assets/ecocash-home.webp" alt="EcoCash Home" class="active" loading="lazy">
+                                <img src="./assets/ecocash-transactions.webp" alt="EcoCash Transactions" loading="lazy">
+                                <img src="./assets/ecocash-qr.webp" alt="EcoCash QR" loading="lazy">
+                                <img src="./assets/ecocash-billers.webp" alt="EcoCash Billers" loading="lazy">
                             </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/kridas-profile.png" alt="Kridas Profile" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/kridas-events.png" alt="Kridas Sports Events" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/kridas-page.png" alt="Kridas Sports Page" loading="lazy">
+                            <div class="screen-dots">
+                                <span class="screen-dot active"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
                             </div>
                         </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev" aria-label="Previous image">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-btn next" aria-label="Next image">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                        <div class="device-home-indicator"></div>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-header">
+                            <div class="app-icon" style="background: linear-gradient(135deg, #00c853, #1de9b6);">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="app-meta">
+                                <h3 class="app-name">EcoCash</h3>
+                                <span class="app-category">Fintech</span>
+                            </div>
                         </div>
-                        <div class="carousel-indicators">
-                            <span class="indicator active" data-slide="0"></span>
-                            <span class="indicator" data-slide="1"></span>
-                            <span class="indicator" data-slide="2"></span>
-                            <span class="indicator" data-slide="3"></span>
+                        <p class="app-description">Digital payments & financial management serving millions across emerging markets.</p>
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="stat-number">1M+</span>
+                                <span class="stat-text">Users</span>
+                            </div>
+                            <div class="app-stat">
+                                <span class="stat-number">4.5</span>
+                                <span class="stat-text">Rating</span>
+                            </div>
+                        </div>
+                        <div class="app-tech-stack">
+                            <span>React Native</span>
+                            <span>TypeScript</span>
+                            <span>Redux</span>
+                        </div>
+                        <div class="app-platforms">
+                            <span class="platform"><i class="fab fa-apple"></i> iOS</span>
+                            <span class="platform"><i class="fab fa-android"></i> Android</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3 class="project-title">Kridas</h3>
-                            <span class="project-type">Sports</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
+                </article>
 
-                <!-- Zaapi Project -->
-                <div class="project-card">
-                    <div class="project-carousel" data-project="zaapi">
-                        <div class="carousel-container">
-                            <div class="carousel-slide active">
-                                <img src="./assets/zaapi.jpeg" alt="Zaapi Main Interface" loading="lazy">
+                <!-- Kridas -->
+                <article class="app-showcase-item">
+                    <div class="device-frame">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <div class="screen-carousel" data-autoplay="true">
+                                <img src="./assets/kridas-feed.webp" alt="Kridas Feed" class="active" loading="lazy">
+                                <img src="./assets/kridas-profile.webp" alt="Kridas Profile" loading="lazy">
+                                <img src="./assets/kridas-events.webp" alt="Kridas Events" loading="lazy">
+                                <img src="./assets/kridas-page.webp" alt="Kridas Page" loading="lazy">
                             </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/zaapi-profile.jpeg" alt="Zaapi User Profile" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/zaapi-filters.jpeg" alt="Zaapi Product Filters" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/zaapi-qr.jpeg" alt="Zaapi QR Scanner" loading="lazy">
+                            <div class="screen-dots">
+                                <span class="screen-dot active"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
                             </div>
                         </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev" aria-label="Previous image">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-btn next" aria-label="Next image">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                        <div class="device-home-indicator"></div>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-header">
+                            <div class="app-icon" style="background: linear-gradient(135deg, #ff6b35, #f7931e);">
+                                <i class="fas fa-futbol"></i>
+                            </div>
+                            <div class="app-meta">
+                                <h3 class="app-name">Kridas</h3>
+                                <span class="app-category">Sports</span>
+                            </div>
                         </div>
-                        <div class="carousel-indicators">
-                            <span class="indicator active" data-slide="0"></span>
-                            <span class="indicator" data-slide="1"></span>
-                            <span class="indicator" data-slide="2"></span>
-                            <span class="indicator" data-slide="3"></span>
+                        <p class="app-description">Global sports networking platform connecting athletes, coaches, and enthusiasts.</p>
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-text">Athletes</span>
+                            </div>
+                            <div class="app-stat">
+                                <span class="stat-number">4.3</span>
+                                <span class="stat-text">Rating</span>
+                            </div>
+                        </div>
+                        <div class="app-tech-stack">
+                            <span>React Native</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="app-platforms">
+                            <span class="platform"><i class="fab fa-apple"></i> iOS</span>
+                            <span class="platform"><i class="fab fa-android"></i> Android</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3 class="project-title">Zaapi</h3>
-                            <span class="project-type">Commerce</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">WebRTC</span>
-                            <span class="tech-tag">AWS</span>
-                        </div>
-                    </div>
-                </div>
+                </article>
 
-                <!-- Namma Kutira Project -->
-                <div class="project-card">
-                    <div class="project-carousel" data-project="nammakutira">
-                        <div class="carousel-container">
-                            <div class="carousel-slide active">
-                                <img src="./assets/nammakutira-Dash.png" alt="Namma Kutira Dashboard" loading="lazy">
+                <!-- Zaapi -->
+                <article class="app-showcase-item">
+                    <div class="device-frame">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <div class="screen-carousel" data-autoplay="true">
+                                <img src="./assets/zaapi.webp" alt="Zaapi Main" class="active" loading="lazy">
+                                <img src="./assets/zaapi-profile.webp" alt="Zaapi Profile" loading="lazy">
+                                <img src="./assets/zaapi-filters.webp" alt="Zaapi Filters" loading="lazy">
+                                <img src="./assets/zaapi-qr.webp" alt="Zaapi QR" loading="lazy">
                             </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/nammakutira-propdetails.png" alt="Namma Kutira Property Details" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/nammakutira-cart.png" alt="Namma Kutira Shopping Cart" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/nammakutira-search.png" alt="Namma Kutira Search" loading="lazy">
+                            <div class="screen-dots">
+                                <span class="screen-dot active"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
                             </div>
                         </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev" aria-label="Previous image">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-btn next" aria-label="Next image">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                        <div class="device-home-indicator"></div>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-header">
+                            <div class="app-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="app-meta">
+                                <h3 class="app-name">Zaapi</h3>
+                                <span class="app-category">Commerce</span>
+                            </div>
                         </div>
-                        <div class="carousel-indicators">
-                            <span class="indicator active" data-slide="0"></span>
-                            <span class="indicator" data-slide="1"></span>
-                            <span class="indicator" data-slide="2"></span>
-                            <span class="indicator" data-slide="3"></span>
+                        <p class="app-description">Social commerce platform blending social media with seamless e-commerce.</p>
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="stat-number">100K+</span>
+                                <span class="stat-text">Downloads</span>
+                            </div>
+                            <div class="app-stat">
+                                <span class="stat-number">4.6</span>
+                                <span class="stat-text">Rating</span>
+                            </div>
+                        </div>
+                        <div class="app-tech-stack">
+                            <span>React Native</span>
+                            <span>WebRTC</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="app-platforms">
+                            <span class="platform"><i class="fab fa-apple"></i> iOS</span>
+                            <span class="platform"><i class="fab fa-android"></i> Android</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3 class="project-title">Namma Kutira</h3>
-                            <span class="project-type">Healthcare</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Socket.io</span>
-                        </div>
-                    </div>
-                </div>
+                </article>
 
-                <!-- ISNEE Project -->
-                <div class="project-card">
-                    <div class="project-carousel" data-project="isnee">
-                        <div class="carousel-container">
-                            <div class="carousel-slide active">
-                                <img src="./assets/isnee-dash.png" alt="ISNEE Dashboard" loading="lazy">
+                <!-- Namma Kutira -->
+                <article class="app-showcase-item">
+                    <div class="device-frame">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <div class="screen-carousel" data-autoplay="true">
+                                <img src="./assets/nammakutira-Dash.webp" alt="Namma Kutira Dashboard" class="active" loading="lazy">
+                                <img src="./assets/nammakutira-propdetails.webp" alt="Namma Kutira Details" loading="lazy">
+                                <img src="./assets/nammakutira-cart.webp" alt="Namma Kutira Cart" loading="lazy">
+                                <img src="./assets/nammakutira-search.webp" alt="Namma Kutira Search" loading="lazy">
                             </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/isnee-events.png" alt="ISNEE Events" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/isnee-leaderboard.png" alt="ISNEE Leaderboard" loading="lazy">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="./assets/isnee-members.png" alt="ISNEE Team Members" loading="lazy">
+                            <div class="screen-dots">
+                                <span class="screen-dot active"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
                             </div>
                         </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev" aria-label="Previous image">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-btn next" aria-label="Next image">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
+                        <div class="device-home-indicator"></div>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-header">
+                            <div class="app-icon" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="app-meta">
+                                <h3 class="app-name">Namma Kutira</h3>
+                                <span class="app-category">Real Estate</span>
+                            </div>
                         </div>
-                        <div class="carousel-indicators">
-                            <span class="indicator active" data-slide="0"></span>
-                            <span class="indicator" data-slide="1"></span>
-                            <span class="indicator" data-slide="2"></span>
-                            <span class="indicator" data-slide="3"></span>
+                        <p class="app-description">Property management and real estate platform with smart search features.</p>
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="stat-number">25K+</span>
+                                <span class="stat-text">Listings</span>
+                            </div>
+                            <div class="app-stat">
+                                <span class="stat-number">4.4</span>
+                                <span class="stat-text">Rating</span>
+                            </div>
+                        </div>
+                        <div class="app-tech-stack">
+                            <span>React Native</span>
+                            <span>MongoDB</span>
+                            <span>Socket.io</span>
+                        </div>
+                        <div class="app-platforms">
+                            <span class="platform"><i class="fab fa-apple"></i> iOS</span>
+                            <span class="platform"><i class="fab fa-android"></i> Android</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3 class="project-title">ISNEE</h3>
-                            <span class="project-type">Motorsport</span>
+                </article>
+
+                <!-- ISNEE -->
+                <article class="app-showcase-item">
+                    <div class="device-frame">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <div class="screen-carousel" data-autoplay="true">
+                                <img src="./assets/isnee-dash.webp" alt="ISNEE Dashboard" class="active" loading="lazy">
+                                <img src="./assets/isnee-events.webp" alt="ISNEE Events" loading="lazy">
+                                <img src="./assets/isnee-leaderboard.webp" alt="ISNEE Leaderboard" loading="lazy">
+                                <img src="./assets/isnee-members.webp" alt="ISNEE Members" loading="lazy">
+                            </div>
+                            <div class="screen-dots">
+                                <span class="screen-dot active"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                            </div>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Real-time</span>
-                            <span class="tech-tag">Analytics</span>
+                        <div class="device-home-indicator"></div>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-header">
+                            <div class="app-icon" style="background: linear-gradient(135deg, #eb3349, #f45c43);">
+                                <i class="fas fa-flag-checkered"></i>
+                            </div>
+                            <div class="app-meta">
+                                <h3 class="app-name">ISNEE</h3>
+                                <span class="app-category">Motorsport</span>
+                            </div>
+                        </div>
+                        <p class="app-description">Racing timing & analytics with real-time performance tracking for motorsport events.</p>
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-text">Racers</span>
+                            </div>
+                            <div class="app-stat">
+                                <span class="stat-number">4.7</span>
+                                <span class="stat-text">Rating</span>
+                            </div>
+                        </div>
+                        <div class="app-tech-stack">
+                            <span>React Native</span>
+                            <span>Real-time</span>
+                            <span>Analytics</span>
+                        </div>
+                        <div class="app-platforms">
+                            <span class="platform"><i class="fab fa-apple"></i> iOS</span>
+                            <span class="platform"><i class="fab fa-android"></i> Android</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
+
+            <!-- Gallery Navigation -->
+            <div class="gallery-nav">
+                <button class="gallery-btn gallery-prev" aria-label="Previous app">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="gallery-indicators">
+                    <span class="gallery-dot active" data-index="0"></span>
+                    <span class="gallery-dot" data-index="1"></span>
+                    <span class="gallery-dot" data-index="2"></span>
+                    <span class="gallery-dot" data-index="3"></span>
+                    <span class="gallery-dot" data-index="4"></span>
+                </div>
+                <button class="gallery-btn gallery-next" aria-label="Next app">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll hint for mobile -->
+        <div class="scroll-hint">
+            <span>Swipe to explore</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
     </section>
 
-    <!-- Get In Touch Section -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Build Something Amazing</h2>
-                <p class="section-subtitle">Ready to bring your mobile app idea to life?</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>
-                        I'm always excited to discuss new opportunities and challenging projects. 
-                        Whether you need a complete mobile app solution or technical consultation, 
-                        let's connect and explore how we can work together.
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <div class="section-label">Get in Touch</div>
+                    <h2 class="contact-title">Let's build something <span class="text-gradient">amazing</span> together</h2>
+                    <p class="contact-text">
+                        Have a project in mind? I'm always excited to discuss new opportunities,
+                        challenging problems, and innovative ideas.
                     </p>
-                    <div class="contact-methods">
-                        <a href="mailto:geenesh99@gmail.com" class="contact-method">
-                            <div class="method-icon">
+                    <div class="contact-links">
+                        <a href="mailto:geenesh99@gmail.com" class="contact-link">
+                            <div class="link-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
-                            <div class="method-content">
-                                <h4>Email</h4>
-                                <span>geenesh99@gmail.com</span>
+                            <div class="link-content">
+                                <span class="link-label">Email</span>
+                                <span class="link-value">geenesh99@gmail.com</span>
                             </div>
                         </a>
-                        <a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener" class="contact-method">
-                            <div class="method-icon">
-                                <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <div class="link-icon">
+                                <i class="fab fa-linkedin-in"></i>
                             </div>
-                            <div class="method-content">
-                                <h4>LinkedIn</h4>
-                                <span>Connect with me</span>
+                            <div class="link-content">
+                                <span class="link-label">LinkedIn</span>
+                                <span class="link-value">Connect with me</span>
                             </div>
                         </a>
-                        <a href="https://github.com/Geenesh" target="_blank" rel="noopener" class="contact-method">
-                            <div class="method-icon">
+                        <a href="https://github.com/Geenesh" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <div class="link-icon">
                                 <i class="fab fa-github"></i>
                             </div>
-                            <div class="method-content">
-                                <h4>GitHub</h4>
-                                <span>View my code</span>
+                            <div class="link-content">
+                                <span class="link-label">GitHub</span>
+                                <span class="link-value">View my code</span>
                             </div>
                         </a>
                     </div>
-                    <div class="availability">
-                        <div class="availability-status">
-                            <div class="status-indicator"></div>
-                            <span>Available for new projects</span>
-                        </div>
-                        <p>Usually responds within 24 hours</p>
-                    </div>
                 </div>
-                <div class="contact-form-container">
+                <div class="contact-form-wrapper">
                     <form action="https://formspree.io/f/xjvnqdeg" method="POST" class="contact-form" id="contact-form">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="project-type">Project Type</label>
                             <select id="project-type" name="project-type" required>
-                                <option value="">Select project type</option>
+                                <option value="">Select a project type</option>
                                 <option value="mobile-app">Mobile App Development</option>
                                 <option value="web-app">Web Application</option>
                                 <option value="consultation">Technical Consultation</option>
                                 <option value="code-review">Code Review & Architecture</option>
-                                <option value="optimization">Performance Optimization</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project goals, timeline, and any specific requirements..." required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">
                             <span class="btn-text">Send Message</span>
                             <span class="btn-loading">
-                                <i class="fas fa-spinner fa-spin"></i>
+                                <svg class="spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32"/>
+                                </svg>
                                 Sending...
                             </span>
                         </button>
@@ -582,42 +576,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="brand-logo">
-                        <span class="brand-text">Geenesh</span>
-                        <span class="brand-accent">.</span>
-                    </div>
-                    <p>React & React Native Developer</p>
-                    <p>Crafting exceptional mobile experiences with modern technologies</p>
+                    <span class="brand-symbol">G</span>
+                    <span class="brand-name">eenesh</span>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="mailto:geenesh99@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-                            <li><a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                            <li><a href="https://github.com/Geenesh" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Expertise</h4>
-                        <ul>
-                            <li><a href="#about">React Native</a></li>
-                            <li><a href="#about">Mobile Development</a></li>
-                            <li><a href="#about">TypeScript</a></li>
-                            <li><a href="#about">Full Stack</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <p class="footer-tagline">Building the future of mobile, one app at a time.</p>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Geenesh S. Built with passion for mobile innovation.</p>
-                <div class="footer-tech">
-                    <span>Built with React Native expertise</span>
+                <p class="copyright">&copy; 2025 Geenesh S. Crafted with care.</p>
+                <div class="footer-links">
+                    <a href="mailto:geenesh99@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Geenesh" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
     </footer>
-
 
     <script src="scripts.js"></script>
 </body>
