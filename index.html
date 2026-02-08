@@ -31,8 +31,49 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <span class="preloader-letter">G</span>
+                <span class="preloader-dot"></span>
+            </div>
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+            <span class="preloader-text">Loading</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Animated Gradient Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
     <!-- Ambient Background -->
     <div class="ambient-bg">
         <div class="gradient-orb gradient-orb-1"></div>
@@ -60,71 +101,158 @@
                     </svg>
                 </span>
             </a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon theme-toggle-icon moon-icon"></i>
+                <i class="fas fa-sun theme-toggle-icon sun-icon"></i>
+            </button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false">
                 <span></span>
                 <span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Bento Grid -->
     <section class="hero" id="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="title-line">Mobile Developer</span>
-                    <span class="title-line title-accent">& Digital Craftsman</span>
+            <!-- Main Title -->
+            <div class="hero-intro">
+                <span class="hero-greeting text-reveal">Hey, I'm</span>
+                <h1 class="hero-name">
+                    <span class="split-text" data-text="Geenesh">Geenesh</span><span class="name-dot">.</span>
                 </h1>
-                <p class="hero-description">
-                    I build exceptional mobile experiences with React Native.
-                    Specialized in fintech, healthcare, and apps that scale to millions.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-value">5+</span>
-                        <span class="stat-label">Years</span>
+                <p class="hero-tagline text-reveal">I craft <span class="text-gradient">mobile experiences</span> that users love</p>
+            </div>
+
+            <!-- Marquee Ticker -->
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <div class="marquee-content">
+                        <span class="marquee-item">React Native</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">TypeScript</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">Mobile Apps</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">iOS & Android</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">UI/UX Design</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">Node.js</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">AWS</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">GraphQL</span>
+                        <span class="marquee-divider">✦</span>
                     </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-value">6+</span>
-                        <span class="stat-label">Projects</span>
+                    <div class="marquee-content" aria-hidden="true">
+                        <span class="marquee-item">React Native</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">TypeScript</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">Mobile Apps</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">iOS & Android</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">UI/UX Design</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">Node.js</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">AWS</span>
+                        <span class="marquee-divider">✦</span>
+                        <span class="marquee-item">GraphQL</span>
+                        <span class="marquee-divider">✦</span>
                     </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-value">1M+</span>
-                        <span class="stat-label">Users</span>
-                    </div>
-                </div>
-                <div class="hero-actions">
-                    <a href="#work" class="btn btn-primary">
-                        <span>View Projects</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
-                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="code-window">
-                    <div class="window-header">
-                        <div class="window-dots">
-                            <span></span><span></span><span></span>
+
+            <!-- Bento Grid -->
+            <div class="bento-grid">
+                <!-- Main Card - About -->
+                <div class="bento-card bento-main tilt-card">
+                    <div class="bento-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h2 class="bento-title">React Native Developer</h2>
+                    <p class="bento-text">Building cross-platform apps for fintech, healthcare, and startups. From concept to App Store.</p>
+                    <a href="#work" class="bento-cta magnetic">
+                        <span>View Work</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Stats Card -->
+                <div class="bento-card bento-stats">
+                    <div class="bento-stat">
+                        <span class="bento-stat-value">5+</span>
+                        <span class="bento-stat-label">Years Building Apps</span>
+                    </div>
+                </div>
+
+                <!-- Projects Card -->
+                <div class="bento-card bento-projects">
+                    <div class="bento-stat">
+                        <span class="bento-stat-value">11</span>
+                        <span class="bento-stat-label">Shipped Products</span>
+                    </div>
+                </div>
+
+                <!-- Users Card -->
+                <div class="bento-card bento-users">
+                    <div class="bento-stat">
+                        <span class="bento-stat-value">1M+</span>
+                        <span class="bento-stat-label">Happy Users</span>
+                    </div>
+                    <div class="bento-sparkle">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Card -->
+                <div class="bento-card bento-stack">
+                    <span class="bento-label">Tech Stack</span>
+                    <div class="bento-tech-icons">
+                        <div class="tech-icon" title="React Native">
+                            <i class="fab fa-react"></i>
                         </div>
-                        <span class="window-title">developer.js</span>
+                        <div class="tech-icon" title="TypeScript">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Node.js">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-icon" title="AWS">
+                            <i class="fab fa-aws"></i>
+                        </div>
                     </div>
-                    <div class="window-body">
-                        <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
-  <span class="code-prop">name</span>: <span class="code-string">"Geenesh S"</span>,
-  <span class="code-prop">role</span>: <span class="code-string">"React Native Developer"</span>,
-  <span class="code-prop">skills</span>: [
-    <span class="code-string">"React Native"</span>,
-    <span class="code-string">"TypeScript"</span>,
-    <span class="code-string">"Node.js"</span>
-  ],
-  <span class="code-prop">passion</span>: <span class="code-string">"Building apps that matter"</span>
-};</code></pre>
+                </div>
+
+                <!-- Featured App Preview -->
+                <div class="bento-card bento-preview">
+                    <div class="mini-phone">
+                        <div class="mini-phone-notch"></div>
+                        <img src="./assets/ecocash-home.webp" alt="Featured App" loading="lazy">
                     </div>
+                    <span class="bento-label">Featured: EcoCash</span>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="bento-card bento-cta-card">
+                    <span class="bento-cta-text">Let's build something amazing</span>
+                    <a href="#contact" class="bento-contact-btn magnetic">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+
+                <!-- Location Card -->
+                <div class="bento-card bento-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>India</span>
+                    <span class="bento-available">
+                        <span class="pulse-dot"></span>
+                        Available
+                    </span>
                 </div>
             </div>
         </div>
@@ -133,13 +261,16 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <div class="section-label">About</div>
+            <div class="section-header">
+                <div class="section-label">About</div>
+                <h2 class="section-title">Who I Am</h2>
+            </div>
             <div class="about-grid">
                 <div class="about-content">
-                    <h2 class="about-title">
+                    <p class="about-tagline">
                         Crafting digital experiences that
                         <span class="text-gradient">push boundaries</span>
-                    </h2>
+                    </p>
                     <p class="about-text">
                         With over 5 years of hands-on experience in React Native development,
                         I've built everything from fintech apps processing millions of transactions
@@ -461,6 +592,108 @@
                         </div>
                     </div>
                 </article>
+
+                <!-- Rentablez Mobile -->
+                <article class="app-showcase-item">
+                    <div class="device-frame">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <div class="screen-carousel" data-autoplay="true">
+                                <img src="./assets/rentablez-dash.webp" alt="Rentablez Dashboard" class="active" loading="lazy">
+                                <img src="./assets/rentablez-inventory.webp" alt="Rentablez Inventory" loading="lazy">
+                                <img src="./assets/rentablez-booking.webp" alt="Rentablez Booking" loading="lazy">
+                            </div>
+                            <div class="screen-dots">
+                                <span class="screen-dot active"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                            </div>
+                        </div>
+                        <div class="device-home-indicator"></div>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-header">
+                            <div class="app-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                                <i class="fas fa-boxes-stacked"></i>
+                            </div>
+                            <div class="app-meta">
+                                <h3 class="app-name">Rentablez</h3>
+                                <span class="app-category">SaaS</span>
+                            </div>
+                        </div>
+                        <p class="app-description">Complete rental management platform for equipment, vehicles & assets with QR scanning.</p>
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="stat-number">5K+</span>
+                                <span class="stat-text">Businesses</span>
+                            </div>
+                            <div class="app-stat">
+                                <span class="stat-number">4.5</span>
+                                <span class="stat-text">Rating</span>
+                            </div>
+                        </div>
+                        <div class="app-tech-stack">
+                            <span>React Native</span>
+                            <span>Node.js</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="app-platforms">
+                            <span class="platform"><i class="fab fa-apple"></i> iOS</span>
+                            <span class="platform"><i class="fab fa-android"></i> Android</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Rentstorez Mobile -->
+                <article class="app-showcase-item">
+                    <div class="device-frame">
+                        <div class="device-notch"></div>
+                        <div class="device-screen">
+                            <div class="screen-carousel" data-autoplay="true">
+                                <img src="./assets/rentstorez-dash.webp" alt="Rentstorez Dashboard" class="active" loading="lazy">
+                                <img src="./assets/rentstorez-store.webp" alt="Rentstorez Store" loading="lazy">
+                                <img src="./assets/rentstorez-orders.webp" alt="Rentstorez Orders" loading="lazy">
+                            </div>
+                            <div class="screen-dots">
+                                <span class="screen-dot active"></span>
+                                <span class="screen-dot"></span>
+                                <span class="screen-dot"></span>
+                            </div>
+                        </div>
+                        <div class="device-home-indicator"></div>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-header">
+                            <div class="app-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="app-meta">
+                                <h3 class="app-name">Rentstorez</h3>
+                                <span class="app-category">Marketplace</span>
+                            </div>
+                        </div>
+                        <p class="app-description">Online storefront for rental businesses with inventory sync and payment processing.</p>
+                        <div class="app-stats">
+                            <div class="app-stat">
+                                <span class="stat-number">2K+</span>
+                                <span class="stat-text">Stores</span>
+                            </div>
+                            <div class="app-stat">
+                                <span class="stat-number">4.4</span>
+                                <span class="stat-text">Rating</span>
+                            </div>
+                        </div>
+                        <div class="app-tech-stack">
+                            <span>React Native</span>
+                            <span>Stripe</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="app-platforms">
+                            <span class="platform"><i class="fab fa-apple"></i> iOS</span>
+                            <span class="platform"><i class="fab fa-android"></i> Android</span>
+                        </div>
+                    </div>
+                </article>
             </div>
 
             <!-- Gallery Navigation -->
@@ -474,6 +707,8 @@
                     <span class="gallery-dot" data-index="2"></span>
                     <span class="gallery-dot" data-index="3"></span>
                     <span class="gallery-dot" data-index="4"></span>
+                    <span class="gallery-dot" data-index="5"></span>
+                    <span class="gallery-dot" data-index="6"></span>
                 </div>
                 <button class="gallery-btn gallery-next" aria-label="Next app">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -488,12 +723,188 @@
         </div>
     </section>
 
+    <!-- Web Projects Section -->
+    <section class="web-projects" id="web-projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Web Applications</div>
+                <h2 class="section-title">Web Platforms I've Built</h2>
+                <p class="section-subtitle">Full-stack web applications with modern technologies</p>
+            </div>
+
+            <div class="web-projects-grid">
+                <!-- Rentablez Web -->
+                <article class="web-project-card">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">
+                                <i class="fas fa-lock"></i>
+                                <span>rentablez.com</span>
+                            </div>
+                        </div>
+                        <div class="browser-screen">
+                            <img src="./assets/rentablez-web.webp" alt="Rentablez Web Platform" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="web-project-info">
+                        <div class="web-project-header">
+                            <div class="web-project-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                                <i class="fas fa-boxes-stacked"></i>
+                            </div>
+                            <div>
+                                <h3 class="web-project-name">Rentablez</h3>
+                                <span class="web-project-category">SaaS Platform</span>
+                            </div>
+                        </div>
+                        <p class="web-project-description">Complete rental management software with real-time inventory tracking, automated booking, integrated payments, and AI-powered analytics.</p>
+                        <div class="web-project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="https://rentablez.com" target="_blank" rel="noopener noreferrer" class="web-project-link">
+                            <span>Visit Site</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Rentstorez Web -->
+                <article class="web-project-card">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">
+                                <i class="fas fa-lock"></i>
+                                <span>rentstorez.com</span>
+                            </div>
+                        </div>
+                        <div class="browser-screen">
+                            <img src="./assets/rentstorez-web.webp" alt="Rentstorez Web Platform" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="web-project-info">
+                        <div class="web-project-header">
+                            <div class="web-project-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div>
+                                <h3 class="web-project-name">Rentstorez</h3>
+                                <span class="web-project-category">E-commerce</span>
+                            </div>
+                        </div>
+                        <p class="web-project-description">Custom online storefronts for rental businesses with inventory synchronization, Stripe payments, and order management.</p>
+                        <div class="web-project-tech">
+                            <span>Next.js</span>
+                            <span>Stripe</span>
+                            <span>MongoDB</span>
+                            <span>Vercel</span>
+                        </div>
+                        <a href="https://rentstorez.com" target="_blank" rel="noopener noreferrer" class="web-project-link">
+                            <span>Visit Site</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Ndawana NH263 -->
+                <article class="web-project-card">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">
+                                <i class="fas fa-lock"></i>
+                                <span>ndawana.com</span>
+                            </div>
+                        </div>
+                        <div class="browser-screen">
+                            <img src="./assets/ndawana-web.webp" alt="Ndawana Platform" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="web-project-info">
+                        <div class="web-project-header">
+                            <div class="web-project-icon" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div>
+                                <h3 class="web-project-name">Ndawana NH263</h3>
+                                <span class="web-project-category">EdTech</span>
+                            </div>
+                        </div>
+                        <p class="web-project-description">Language learning platform for Zimbabwean languages, bringing communities together through culture and education.</p>
+                        <div class="web-project-tech">
+                            <span>React</span>
+                            <span>Firebase</span>
+                            <span>Node.js</span>
+                            <span>i18n</span>
+                        </div>
+                        <a href="https://ndawana.com" target="_blank" rel="noopener noreferrer" class="web-project-link">
+                            <span>Visit Site</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- USHJA -->
+                <article class="web-project-card">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">
+                                <i class="fas fa-lock"></i>
+                                <span>ushja.org</span>
+                            </div>
+                        </div>
+                        <div class="browser-screen">
+                            <img src="./assets/ushja-web.webp" alt="USHJA Platform" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="web-project-info">
+                        <div class="web-project-header">
+                            <div class="web-project-icon" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+                                <i class="fas fa-horse"></i>
+                            </div>
+                            <div>
+                                <h3 class="web-project-name">USHJA</h3>
+                                <span class="web-project-category">Sports Portal</span>
+                            </div>
+                        </div>
+                        <p class="web-project-description">United States Hunter Jumper Association portal for competition management, member services, and equestrian event tracking.</p>
+                        <div class="web-project-tech">
+                            <span>React</span>
+                            <span>GraphQL</span>
+                            <span>PostgreSQL</span>
+                            <span>AWS</span>
+                        </div>
+                        <a href="https://ushja.org" target="_blank" rel="noopener noreferrer" class="web-project-link">
+                            <span>Visit Site</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
+            <div class="section-header">
+                <div class="section-label">Get in Touch</div>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
             <div class="contact-wrapper">
                 <div class="contact-content">
-                    <div class="section-label">Get in Touch</div>
                     <h2 class="contact-title">Let's build something <span class="text-gradient">amazing</span> together</h2>
                     <p class="contact-text">
                         Have a project in mind? I'm always excited to discuss new opportunities,
@@ -571,22 +982,76 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - Creative Design -->
     <footer class="footer">
+        <div class="footer-glow"></div>
         <div class="container">
-            <div class="footer-content">
+            <!-- Large CTA Text -->
+            <div class="footer-cta">
+                <h2 class="footer-headline">
+                    <span class="text-reveal">Let's create</span>
+                    <span class="text-reveal">something <span class="text-gradient">extraordinary</span></span>
+                </h2>
+                <a href="mailto:geenesh99@gmail.com" class="footer-email magnetic">
+                    <span>geenesh99@gmail.com</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Footer Grid -->
+            <div class="footer-grid">
+                <!-- Navigation -->
+                <div class="footer-nav">
+                    <span class="footer-label">Navigation</span>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#work" class="footer-link">Work</a>
+                    <a href="#web-projects" class="footer-link">Web Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+
+                <!-- Social -->
+                <div class="footer-social">
+                    <span class="footer-label">Connect</span>
+                    <a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Geenesh" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:geenesh99@gmail.com" class="footer-link">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+
+                <!-- Status -->
+                <div class="footer-status">
+                    <span class="footer-label">Status</span>
+                    <div class="status-item">
+                        <span class="status-dot"></span>
+                        <span>Available for projects</span>
+                    </div>
+                    <div class="footer-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>India</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
                 <div class="footer-brand">
                     <span class="brand-symbol">G</span>
                     <span class="brand-name">eenesh</span>
                 </div>
-                <p class="footer-tagline">Building the future of mobile, one app at a time.</p>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2025 Geenesh S. Crafted with care.</p>
-                <div class="footer-links">
-                    <a href="mailto:geenesh99@gmail.com">Email</a>
-                    <a href="https://www.linkedin.com/in/geenesh-s-812825228" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://github.com/Geenesh" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <p class="copyright">
+                    &copy; 2025 Geenesh S.
+                    <span class="footer-divider">•</span>
+                    Crafted with <span class="heart">♥</span> and lots of coffee
+                </p>
+                <div class="footer-time">
+                    <span id="current-time"></span>
                 </div>
             </div>
         </div>
